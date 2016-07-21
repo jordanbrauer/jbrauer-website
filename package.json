@@ -1,0 +1,28 @@
+{
+  "name": "jbrauer-website",
+  "version": "0.0.1",
+  "description": "my portfolio source code. for educational purposes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jordanbrauer/jbrauer-website.git"
+  },
+  "keywords": [
+    "portfolio",
+    "educational"
+  ],
+  "author": "Jordan Brauer <j.brauer@hotmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/jordanbrauer/jbrauer-website/issues"
+  },
+  "homepage": "https://github.com/jordanbrauer/jbrauer-website#readme",
+  "devDependencies": {
+    "foundation-sites": "^6.2.3",
+    "gulp": "^3.9.1",
+    "gulp-compass": "^2.1.0"
+  }
+}
