@@ -20,6 +20,12 @@
 .fs-12{font-size: 12px;}
 .fs-14{font-size: 14px;}
 
+/* Font colours */
+.fc-teal{color: #0B9;}
+.fc-teal-hover:hover{color: #007560;}
+.fc-purple{color: #9447a9;}
+.fc-purple-hover:hover{color: #582a65;}
+
 /* Margin buffers */
 .buffer-reset-m{margin: 0;}
 .buffer-t-m16{margin-top: 16px;}
