@@ -12,15 +12,61 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
     livereload = require('gulp-livereload'),
-    del = require('del')
-    merge = require('merge-stream')
+    del = require('del'),
+    merge = require('merge-stream'),
     runseq = require('run-sequence');
+
+//--------------------------------------------------
+// Directory Variables
+//--------------------------------------------------
+/* source directory */
+var $dir_src = './src',
+    $dir_css_src = $dir_src + '/css',
+    $dir_sass_src = $dir_src + '/sass',
+    $dir_fonts_src = $dir_src + '/fonts',
+    $dir_img_src = $dir_src + '/img',
+    $dir_js_src = $dir_src + '/js';
+
+/* public directory */
+var $dir_public = './public_html',
+    $dir_css_public = $dir_public + '/css',
+    // $dir_sass_public = $dir_public + '/sass',
+    $dir_fonts_public = $dir_public + '/fonts',
+    $dir_img_public = $dir_public + '/img',
+    $dir_js_public = $dir_public + '/js';
+
+/* temporary files directory */
+var $dir_temp = './.tmp';
+
+/* test directory */
+var $dir_test = './test';
+
+/* foundation-sites directories */
+var $dir_foundation = './node_modules/foundation-sites',
+    $dir_sass_foundation = $dir_foundation + '/scss/**/*',
+    $dir_js_foundation = $dir_foundation + '/js/*';
 
 //--------------------------------------------------
 // Fetching Tasks
 //--------------------------------------------------
-gulp.task('get:foundation', function() {
-  // fetch foundation assets from node_modules
+
+gulp.task('get:foundation-sass', function() {
+  return gulp.src($dir_sass_foundation)
+    .pipe(gulp.dest($dir_sass_src + '/foundation'))
+    .pipe(notify({onLast: true, message: 'get:foundation-sass completed successfully.'}));
+});
+
+gulp.task('get:foundation-js', function() {
+  return gulp.src($dir_js_foundation)
+    .pipe(gulp.dest($dir_js_src + '/foundation'))
+    .pipe(notify({onLast: true, message: 'get:foundation-js completed successfully.'}))
+});
+
+gulp.task('get:foundation-all', function() {
+  return runseq(
+    'get:foundation-sass',
+    'get:foundation-js'
+  );
 });
 
 //--------------------------------------------------
