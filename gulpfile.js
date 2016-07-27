@@ -43,23 +43,35 @@ var $dir_test = './test';
 
 /* foundation-sites directories */
 var $dir_foundation = './node_modules/foundation-sites',
-    $dir_sass_foundation = $dir_foundation + '/scss/**/*',
-    $dir_js_foundation = $dir_foundation + '/js/*';
+    $dir_sass_foundation = $dir_foundation + '/scss',
+    $dir_js_foundation = $dir_foundation + '/js';
+    $dir_dist_foundation = $dir_foundation + '/dist';
+    $dir_vendor_foundation = $dir_foundation + '/vendor';
 
 //--------------------------------------------------
 // Fetching Tasks
 //--------------------------------------------------
 
 gulp.task('get:foundation-sass', function() {
-  return gulp.src($dir_sass_foundation)
-    .pipe(gulp.dest($dir_sass_src + '/foundation'))
+  var path1 = gulp.src([
+    '!' + $dir_sass_foundation + '/foundation.scss',
+    $dir_sass_foundation + '/**/*'
+  ]).pipe(gulp.dest($dir_sass_src + '/foundation'));
+
+  var path2 = gulp.src($dir_sass_foundation + '/foundation.scss')
+    .pipe(rename({prefix:'_'}))
+    .pipe(gulp.dest($dir_sass_src + '/foundation'));
+
+  return merge(path1, path2)
     .pipe(notify({onLast: true, message: 'get:foundation-sass completed successfully.'}));
+    // .pipe(gulp.dest($dir_sass_src + '/foundation'))
+    // .pipe(notify({onLast: true, message: 'get:foundation-sass completed successfully.'}));
 });
 
-gulp.task('get:foundation-js', function() {
+gulp.task('get:foundation-js -c', function() {
   return gulp.src($dir_js_foundation)
     .pipe(gulp.dest($dir_js_src + '/foundation'))
-    .pipe(notify({onLast: true, message: 'get:foundation-js completed successfully.'}))
+    .pipe(notify({onLast: true, message: 'get:foundation-js -c completed successfully.'}));
 });
 
 gulp.task('get:foundation-all', function() {

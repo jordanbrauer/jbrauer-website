@@ -4,6 +4,12 @@
 // Description: Sass compiler file for jbrauer styles.
 //--------------------------------------------------
 
+@charset 'UTF-8';
+/*ForceCharset : ¡*/
+
 @import 'jbrauer/screen';
 @import 'jbrauer/print';
 @import 'jbrauer/ie';
+
+// Components
+@import 'jbrauer/components/images';
