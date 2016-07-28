@@ -55,37 +55,100 @@ var $dir_foundation = './node_modules/foundation-sites',
 // get:foundation-sass
 // -------------------
 gulp.task('get:foundation-sass', function() {
-  // 1) get all components except the main foundation.scss file.
-  // 2) place them into a /foundation directory in /src.
-  var path1 = gulp.src([
+  /**
+   * 1) get all components except the main foundation.scss file.
+   * 2) place them into a /foundation directory in /src.
+   */
+  var stream1 = gulp.src([
     '!' + $dir_sass_foundation + '/foundation.scss',
     $dir_sass_foundation + '/**/*'
   ]).pipe(gulp.dest($dir_sass_src + '/foundation'));
 
-  // 1) get the main foundation.scss file.
-  // 2) prepend a '_' to the file name to make the file a partial.
-  var path2 = gulp.src($dir_sass_foundation + '/foundation.scss')
+  /**
+   * 1) get the main foundation.scss file.
+   * 2) prepend a '_' to the file name to make the file a partial.
+   */
+  var stream2 = gulp.src($dir_sass_foundation + '/foundation.scss')
     .pipe(rename({prefix:'_'}))
     .pipe(gulp.dest($dir_sass_src + '/foundation'));
 
-  // 1) merge the paths into 1 path.
-  // 2) notify when the job is complete.
-  return merge(path1, path2)
+  /**
+   * 1) merge streams.
+   * 2) notify when the job is complete.
+   */
+  return merge(stream1, stream2)
     .pipe(notify({onLast: true, message: 'get:foundation-sass completed successfully.'}));
 });
 
 // get:foundation-js
 // -----------------
 gulp.task('get:foundation-js', function() {
-  return gulp.src($dir_js_foundation)
-    .pipe(gulp.dest($dir_js_src + '/foundation'))
-    .pipe(notify({onLast: true, message: 'get:foundation-js completed successfully.'}));
+  /**
+   * 1) get the foundation javascript plugins.
+   * 2) put the plugins into a /foundation/plugins directory within /src.
+   */
+  var stream1 = gulp.src($dir_dist_foundation + '/plugins/*')
+    .pipe(gulp.dest($dir_js_src + '/foundation/plugins'));
+
+  /**
+   * 1) get the concatinated foundation javascript file.
+   * 2) put the file into the /foundation directory within /src.
+   */
+  var stream2 = gulp.src($dir_dist_foundation + '/foundation.js')
+    .pipe(gulp.dest($dir_js_src + '/foundation'));
+
+  /**
+   * 1) merge streams.
+   * 2) notify when the job is complete.
+   */
+  return merge(stream1, stream2)
+    .pipe(notify({onLast: true, message: 'get:foundation-js completed successfully.'}))
 });
 
-gulp.task('get:foundation-all', function() {
+// get:foundation-vendor
+// ---------------------
+gulp.task('get:foundation-vendor', function(){
+  /**
+   * 1) get all foundation vendor scripts
+   */
+  var stream1 = gulp.src($dir_vendor_foundation + '/jquery/dist/jquery.min.js')
+        .pipe(gulp.dest($dir_js_src + '/vendor/jquery')),
+      stream2 = gulp.src($dir_vendor_foundation + '/modernizr/modernizr.js')
+        .pipe(gulp.dest($dir_js_src + '/vendor/modernizr')),
+      stream3 = gulp.src($dir_vendor_foundation + '/lodash/dist/lodash.min.js')
+        .pipe(gulp.dest($dir_js_src + '/vendor/lodash')),
+      stream4 = gulp.src($dir_vendor_foundation + '/jquery-placeholder/jquery.placeholder.js')
+        .pipe(gulp.dest($dir_js_src + '/vendor/jquery-placeholder')),
+      stream5 = gulp.src($dir_vendor_foundation + '/jquery.cookie/jquery.cookie.js')
+        .pipe(gulp.dest($dir_js_src + '/vendor/jquery-cookie')),
+      stream6 = gulp.src([
+        $dir_vendor_foundation + '/jquery.autocomplete/dist/jquery.autocomplete.min.js',
+        $dir_vendor_foundation + '/jquery.autocomplete/content/styles.css'
+      ]).pipe(gulp.dest($dir_js_src + '/vendor/jquery-autocomplete'));
+
+  /**
+   * 1) create initial merged stream
+   * 2) add remaining streams to inital merge.
+   */
+  var merged = merge(stream1, stream2);
+  merged.add(stream3)
+        .add(stream4)
+        .add(stream5)
+        .add(stream6);
+
+  /**
+   * 1) return the merged stream.
+   * 2) notify when the job is complete.
+   */
+  return merged
+    .pipe(notify({onLast: true, message: 'get:foundation-vendor completed successfully.'}));
+});
+
+gulp.task('get:foundation', function() {
   return runseq(
     'get:foundation-sass',
-    'get:foundation-js'
+    'get:foundation-js',
+    'get:foundation-vendor'
   );
 });
 

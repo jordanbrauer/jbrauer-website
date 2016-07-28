@@ -2,3 +2,8 @@
 li:focus{
   outline: none !important;
 }
+
+// top-bar background colour leaking into is-dropdown-submenu background colour
+.is-dropdown-submenu{
+  background: #fefefe !important;
+}

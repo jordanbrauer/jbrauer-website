@@ -1,3 +1,7 @@
 li:focus {
   outline: none !important;
 }
+
+.is-dropdown-submenu {
+  background: #fefefe !important;
+}
