@@ -52,26 +52,34 @@ var $dir_foundation = './node_modules/foundation-sites',
 // Fetching Tasks
 //--------------------------------------------------
 
+// get:foundation-sass
+// -------------------
 gulp.task('get:foundation-sass', function() {
+  // 1) get all components except the main foundation.scss file.
+  // 2) place them into a /foundation directory in /src.
   var path1 = gulp.src([
     '!' + $dir_sass_foundation + '/foundation.scss',
     $dir_sass_foundation + '/**/*'
   ]).pipe(gulp.dest($dir_sass_src + '/foundation'));
 
+  // 1) get the main foundation.scss file.
+  // 2) prepend a '_' to the file name to make the file a partial.
   var path2 = gulp.src($dir_sass_foundation + '/foundation.scss')
     .pipe(rename({prefix:'_'}))
     .pipe(gulp.dest($dir_sass_src + '/foundation'));
 
+  // 1) merge the paths into 1 path.
+  // 2) notify when the job is complete.
   return merge(path1, path2)
     .pipe(notify({onLast: true, message: 'get:foundation-sass completed successfully.'}));
-    // .pipe(gulp.dest($dir_sass_src + '/foundation'))
-    // .pipe(notify({onLast: true, message: 'get:foundation-sass completed successfully.'}));
 });
 
-gulp.task('get:foundation-js -c', function() {
+// get:foundation-js
+// -----------------
+gulp.task('get:foundation-js', function() {
   return gulp.src($dir_js_foundation)
     .pipe(gulp.dest($dir_js_src + '/foundation'))
-    .pipe(notify({onLast: true, message: 'get:foundation-js -c completed successfully.'}));
+    .pipe(notify({onLast: true, message: 'get:foundation-js completed successfully.'}));
 });
 
 gulp.task('get:foundation-all', function() {
