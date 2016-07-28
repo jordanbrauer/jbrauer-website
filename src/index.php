@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/jbrauer.css">
     <link rel="stylesheet" type="text/css" href="js/vendor/jquery-autocomplete/styles.css">
     <link rel="stylesheet" type="text/css" href="css/foundation.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="css/shame.css">
   </head>
   <body>
@@ -62,7 +63,7 @@
     <script type="text/javascript" src="js/vendor/jquery-autocomplete/jquery.autocomplete.min.js"></script>
     <!-- <script type="text/javascript" src="js/jbrauer/jbrauer.js"></script> -->
     <script type="text/javascript" src="js/foundation/foundation.js"></script>
-    <script src="https://use.fontawesome.com/c477074d77.js"></script>
+    <!-- <script src="https://use.fontawesome.com/c477074d77.js"></script> -->
     <script type="text/javascript">
       $(document).foundation();
     </script>
