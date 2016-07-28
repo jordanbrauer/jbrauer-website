@@ -3,7 +3,14 @@ li:focus{
   outline: none !important;
 }
 
-// top-bar background colour leaking into is-dropdown-submenu background colour
-.is-dropdown-submenu{
-  background: #fefefe !important;
+// .top-bar background colour leaking into .is-dropdown-submenu background colour
+//.is-dropdown-submenu{
+//  background: #fefefe !important;
+//}
+
+// .top-bar-title text positioning fix
+.top-bar-title{
+  margin-top: 7px;
+	display: inline-block;
+	margin-left: 8px;
 }

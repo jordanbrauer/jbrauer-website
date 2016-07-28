@@ -1,4 +1,14 @@
 .logo{
+  &-topbar{
+    width: auto;
+    height: 24px;
+    max-height: 24px;
+  }
+  &-icon{
+    width: 64px;
+    max-width: 64px;
+    height: auto;
+  }
   &-alt{
     width: 128px;
     max-width: 128px;

@@ -14,35 +14,86 @@
   <body>
     <!-- navbar -->
     <div class="row expanded">
-      <div class="top-bar stacked-for-medium stacked-for-large">
+      <div class="top-bar">
+        <div class="row expanded">
+          <div class="top-bar-title">
+            <img class="logo-topbar" data-interchange="[img/logo/jbrauer/svg/jbrauer-alt-logo.svg, small], [img/logo/jbrauer/svg/jbrauer-logo.svg, medium], [img/logo/jbrauer/svg/jbrauer-logo.svg, large]" alt="jordan brauer logo" src="img/logo/jbrauer/svg/jbrauer-alt-logo.svg">
+            <div class="subheader" style="font: 12px consolas, monospace">Web Design &amp; Development</div>
+          </div>
+          <ul class="menu float-right">
+            <li><a class="small success button" href="#">Hire Me!</a></li>
+          </ul>
+        </div>
+        <div class="row expanded">
+          <div class="top-bar-left">
+            <a class="small button" href="#" data-toggle="dropdown-menu" style="margin:0;"><i class="fa fa-md fa-bars"></i> Menu</a>
+            <div id="dropdown-menu" class="dropdown-pane" data-dropdown data-auto-focus="true">
+              <ul class="menu vertical">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li>
+                  <a href="#">Projects</a>
+                  <ul>
+                    <li><a href="#">Current Projects</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Resume</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- <div class="top-bar-right">
+          </div> -->
+        </div>
+      </div>
+      <!-- <div class="top-bar">
+          <div class="top-bar-title">
+            <img class="logo-topbar" data-interchange="[img/logo/jbrauer/svg/jbrauer-alt-logo.svg, small], [img/logo/jbrauer/svg/jbrauer-logo.svg, medium], [img/logo/jbrauer/svg/jbrauer-logo.svg, large]" alt="jordan brauer logo" src="img/logo/jbrauer/svg/jbrauer-alt-logo.svg">
+            <div class="subheader" style="font: 12px consolas, monospace">Web Design &amp; Development</div>
+          </div>
+          <ul class="menu float-right">
+            <li><a class="small success button" href="#">Hire Me!</a></li>
+          </ul>
+      </div>
+      <div class="title-bar is-dropdown-submenu-parent" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+        <a class="small button" href="#" data-toggle style="margin:0;">
+          <i class="fa fa-bars fa-lg"></i>&nbsp;
+          <div class="title-bar-title">Menu</div>
+        </a>
+        <hr style="margin: 8px auto 0 auto;">
+      </div>
+      <div class="top-bar" id="responsive-menu">
         <div class="top-bar-left">
           <ul class="dropdown menu" data-dropdown-menu>
-            <li class="menu-text">jBrauer Web Design</li>
-            <li><a href="#" tabindex="0">About</a></li>
-            <li>
-              <a href="#" tabindex="0">Portfolio</a>
+            <li class="active"><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="is-dropdown-submenu-parent">
+              <a href="#">Projects</a>
               <ul class="menu vertical">
-                <li><a href="#" tabindex="0">Category 1</a></li>
-                <li><a href="#" tabindex="0">Category 2</a></li>
-                <li><a href="#" tabindex="0">Category 3</a></li>
+                <li><a href="#">Current Projects</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Resume</a></li>
               </ul>
             </li>
-            <li><a href="#" tabindex="0">Resume</a></li>
-            <li><a href="#" tabindex="0">Contact</a></li>
           </ul>
         </div>
         <div class="top-bar-right">
           <ul class="menu">
-            <li><input type="search" placeholder="Search"></li>
-            <li><button type="button" class="button"><i class="fa fa-search"></i></button></li>
+            <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-lg fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-lg fa-github"></i></a></li>
+            <li><a href="#"><i class="fa fa-lg fa-codepen"></i></a></li>
           </ul>
         </div>
-      </div>
-      <!-- <nav aria-label="You are here:" role="navigation">
-        <ul class="breadcrumbs">
-          <li><a href="#">Home</a></li>
-        </ul>
-      </nav> -->
+      </div> -->
+      <!-- <div class="row expanded">
+        <nav aria-label="You are here:" role="navigation">
+          <ul class="breadcrumbs">
+            <li><a href="#">Home</a></li>
+          </ul>
+        </nav>
+      </div> -->
     </div>
 
     <!-- main content -->

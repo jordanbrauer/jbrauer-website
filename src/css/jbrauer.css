@@ -57,6 +57,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+.logo-topbar {
+  width: auto;
+  height: 24px;
+  max-height: 24px;
+}
+.logo-icon {
+  width: 64px;
+  max-width: 64px;
+  height: auto;
+}
 .logo-alt {
   width: 128px;
   max-width: 128px;

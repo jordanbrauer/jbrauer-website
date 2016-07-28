@@ -4172,8 +4172,8 @@ table.hover tr:nth-of-type(even):hover {
 }
 
 .title-bar {
-  background: #0a0a0a;
-  color: #fefefe;
+  background: #e6e6e6;
+  color: #0a0a0a;
   padding: 0.5rem;
 }
 .title-bar::before, .title-bar::after {
@@ -4315,6 +4315,9 @@ table.hover tr:nth-of-type(even):hover {
 .top-bar,
 .top-bar ul {
   background-color: #e6e6e6;
+}
+.top-bar ul ul {
+  background-color: #fefefe;
 }
 .top-bar input {
   max-width: 200px;

@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jordan Brauer | Welcome</title>
     <link rel="stylesheet" type="text/css" href="css/jbrauer.css">
-    <!-- <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="js/vendor/jquery-autocomplete/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/foundation.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="css/shame.css">
   </head>
   <body>
@@ -117,11 +119,18 @@
       </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-    <script>
+    <!-- scripts -->
+    <script type="text/javascript" src="js/vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="js/vendor/modernizr/modernizr.js"></script>
+    <script type="text/javascript" src="js/vendor/lodash/lodash.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery-cookie/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery-autocomplete/jquery.autocomplete.min.js"></script>
+    <!-- <script type="text/javascript" src="js/jbrauer/jbrauer.js"></script> -->
+    <script type="text/javascript" src="js/foundation/foundation.js"></script>
+    <!-- <script src="https://use.fontawesome.com/c477074d77.js"></script> -->
+    <script type="text/javascript">
       $(document).foundation();
     </script>
-    <script src="https://use.fontawesome.com/c477074d77.js"></script>
   </body>
 </html>

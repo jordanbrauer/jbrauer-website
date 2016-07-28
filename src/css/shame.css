@@ -2,6 +2,8 @@ li:focus {
   outline: none !important;
 }
 
-.is-dropdown-submenu {
-  background: #fefefe !important;
+.top-bar-title {
+  margin-top: 7px;
+  display: inline-block;
+  margin-left: 8px;
 }

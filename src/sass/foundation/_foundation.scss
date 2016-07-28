@@ -5,8 +5,12 @@
  * Licensed under MIT Open Source
  */
 
+
 // Sass utilities
-@import 'util/util';
+// @import 'util/util'; // imported via _settings.scss
+
+// Foundation settings
+@import 'settings';
 
 // Global variables and styles
 @import 'global';
