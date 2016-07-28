@@ -1,19 +1,20 @@
 # jbrauer-website
 
----
-
 __Summary:__
 My portfolio source code and process documentation for educational purposes. Anyone can reference this project for his/her own learning purposes. Do not copy the project and claim as your own. If you have questions on the matter please contact me [here](https://jordanbrauer.ca).
 
 __Table of Contents:__
+
 1. [Target Platforms](#target-platforms)
   - [Browsers](#browsers)
   - [Screens](#screens)
   - [Operating Systems](#operating-systems)
+
 2. [Technologies Used](#technologies-used)
   - [Languages](#languages)
   - [Frameworks &amp; Libraries](#frameworks-libraries)
   - [Software](#software)
+
 3. [Credits](#credits)
 
 ## Target Platforms
@@ -70,8 +71,6 @@ __Software:__
 - LAMP stack (production server)
 - phpMyAdmin
 - LetsEncrypt
-
----
 
 ## Credits
 __Author:__ [Jordan Brauer](https://jordanbrauer.ca)
