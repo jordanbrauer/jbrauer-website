@@ -12,89 +12,66 @@
     <link rel="stylesheet" type="text/css" href="css/shame.css">
   </head>
   <body>
-    <!-- navbar -->
+    <!-- navigation -->
     <div class="row expanded">
-      <div class="top-bar">
-        <div class="row expanded">
-          <div class="top-bar-title">
-            <img class="logo-topbar" data-interchange="[img/logo/jbrauer/svg/jbrauer-alt-logo.svg, small], [img/logo/jbrauer/svg/jbrauer-logo.svg, medium], [img/logo/jbrauer/svg/jbrauer-logo.svg, large]" alt="jordan brauer logo" src="img/logo/jbrauer/svg/jbrauer-alt-logo.svg">
-            <div class="subheader" style="font: 12px consolas, monospace">Web Design &amp; Development</div>
-          </div>
-          <ul class="menu float-right">
-            <li><a class="small success button" href="#">Hire Me!</a></li>
-          </ul>
-        </div>
-        <div class="row expanded">
-          <div class="top-bar-left">
-            <a class="small button" href="#" data-toggle="dropdown-menu" style="margin:0;"><i class="fa fa-md fa-bars"></i> Menu</a>
-            <div id="dropdown-menu" class="dropdown-pane" data-dropdown data-auto-focus="true">
-              <ul class="menu vertical">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li>
-                  <a href="#">Projects</a>
-                  <ul>
-                    <li><a href="#">Current Projects</a></li>
+      <div class="top-bar" style="box-shadow: 0px 4px 16px #CCC; -webkit-transition: 1s ease all;">
+        <div class="jb-wrapper" style="margin: 0 auto; max-width: 1200px; width: auto;">
+          <div class="row expanded" style="margin-bottom: 16px;">
+            <div class="column">
+              <div class="top-bar-title">
+                <img class="logo-topbar" data-interchange="[img/logo/jbrauer/svg/jbrauer-alt-logo.svg, small], [img/logo/jbrauer/svg/jbrauer-logo.svg, medium], [img/logo/jbrauer/svg/jbrauer-logo.svg, large]" alt="jordan brauer logo" src="img/logo/jbrauer/svg/jbrauer-alt-logo.svg">
+                <div class="subheader" style="font: 12px consolas, monospace">Web Design &amp; Development</div> <!-- /.subheader -->
+              </div> <!-- /.top-bar-title -->
+              <ul class="menu float-right">
+                <!-- <li><a href="#"><i class="fa fa-md fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-md fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-md fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-md fa-github"></i></a></li>
+                <li><a href="#"><i class="fa fa-md fa-codepen"></i></a></li> -->
+                <li><a class="small success button" href="#">Hire Me!</a></li>
+              </ul>
+            </div> <!-- /.column-->
+          </div> <!-- /.row -->
+          <div class="row expanded">
+            <div class="column">
+              <div data-responsive-toggle="responsive-menu-1" data-hide-for="medium">
+                <button id="menu-btn" class="small button" data-toggle style="margin-bottom: 8px;"><i class="fa fa-md fa-bars"></i> Menu</button>
+              </div><!-- /data-responsive-toggle -->
+              <div id="responsive-menu-1">
+                <div class="top-bar-left">
+                  <ul class="dropdown menu vertical medium-horizontal" data-dropdown-menu>
+                    <li class="active"><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Resume</a></li>
                   </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- <div class="top-bar-right">
-          </div> -->
+                </div> <!-- /.top-bar-left -->
+                <div class="top-bar-right">
+                  <ul class="menu">
+                    <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-lg fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-lg fa-github"></i></a></li>
+                    <li><a href="#"><i class="fa fa-lg fa-codepen"></i></a></li>
+                    <!-- <li><a class="tiny success button" href="#">Hire Me!</a></li> -->
+                  </ul>
+                </div> <!-- /.top-bar-right-->
+              </div> <!-- /#responsive-menu-1 -->
+            </div> <!-- /.column -->
+          </div> <!-- /.row -->
         </div>
-      </div>
-      <!-- <div class="top-bar">
-          <div class="top-bar-title">
-            <img class="logo-topbar" data-interchange="[img/logo/jbrauer/svg/jbrauer-alt-logo.svg, small], [img/logo/jbrauer/svg/jbrauer-logo.svg, medium], [img/logo/jbrauer/svg/jbrauer-logo.svg, large]" alt="jordan brauer logo" src="img/logo/jbrauer/svg/jbrauer-alt-logo.svg">
-            <div class="subheader" style="font: 12px consolas, monospace">Web Design &amp; Development</div>
-          </div>
-          <ul class="menu float-right">
-            <li><a class="small success button" href="#">Hire Me!</a></li>
-          </ul>
-      </div>
-      <div class="title-bar is-dropdown-submenu-parent" data-responsive-toggle="responsive-menu" data-hide-for="medium">
-        <a class="small button" href="#" data-toggle style="margin:0;">
-          <i class="fa fa-bars fa-lg"></i>&nbsp;
-          <div class="title-bar-title">Menu</div>
-        </a>
-        <hr style="margin: 8px auto 0 auto;">
-      </div>
-      <div class="top-bar" id="responsive-menu">
-        <div class="top-bar-left">
-          <ul class="dropdown menu" data-dropdown-menu>
-            <li class="active"><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li class="is-dropdown-submenu-parent">
-              <a href="#">Projects</a>
-              <ul class="menu vertical">
-                <li><a href="#">Current Projects</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Resume</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="top-bar-right">
-          <ul class="menu">
-            <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-lg fa-linkedin"></i></a></li>
-            <li><a href="#"><i class="fa fa-lg fa-github"></i></a></li>
-            <li><a href="#"><i class="fa fa-lg fa-codepen"></i></a></li>
-          </ul>
-        </div>
-      </div> -->
-      <!-- <div class="row expanded">
+      </div> <!-- /.top-bar -->
+      <!--
+      <div class="row expanded">
         <nav aria-label="You are here:" role="navigation">
           <ul class="breadcrumbs">
             <li><a href="#">Home</a></li>
           </ul>
         </nav>
-      </div> -->
-    </div>
+      </div>
+      -->
+    </div><!-- /.row -->
+    <!-- /navigation -->
 
     <!-- main content -->
     <div class="row column" style="background: #0b9;">
@@ -117,6 +94,21 @@
     <!-- <script src="https://use.fontawesome.com/c477074d77.js"></script> -->
     <script type="text/javascript">
       $(document).foundation();
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      var $menu_btn = $('#menu-btn');
+
+      $menu_btn.on('click', function(){
+        if (!$menu_btn.hasClass('alert')) {
+          $menu_btn.addClass('alert')
+                   .html('<i class="fa fa-md fa-times"></i> Close');
+        } else if ($menu_btn.hasClass('alert')) {
+          $menu_btn.removeClass('alert')
+                   .html('<i class="fa fa-md fa-bars"></i> Menu');
+        }
+      });
+    });
     </script>
   </body>
 </html>
