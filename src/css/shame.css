@@ -2,8 +2,45 @@ li:focus {
   outline: none !important;
 }
 
-.top-bar-title {
-  margin-top: 7px;
-  display: inline-block;
-  margin-left: 8px;
+[data-sticky] {
+  width: 100%;
+}
+
+@media screen and (max-width: 430px) {
+  .pull-left-for-small-only {
+    float: left !important;
+  }
+}
+.header-hero {
+  padding: 10rem 0;
+  background: url(http://placehold.it/2000x500&content=Hero-Image) center center no-repeat;
+  background-size: cover;
+}
+
+.multi-bar {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+.multi-bar .top-bar:not(:last-child) {
+  background: #efefef;
+}
+
+.top-bar {
+  padding: 1.75rem;
+  transition: all .2s ease;
+}
+
+.is-stuck .top-bar {
+  padding: 1rem;
+  transition: all .2s ease;
+}
+
+#responsive-menu-toggle {
+  background: #efefef;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+#responsive-menu-toggle .top-bar-title {
+  width: 100%;
+}
+#responsive-menu-toggle #responsive-menu-btn {
+  margin-bottom: 0;
 }

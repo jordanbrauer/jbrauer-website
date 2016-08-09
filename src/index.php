@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jordan Brauer | Welcome</title>
-    <!-- stylesheets -->
+    <!-- | External Stylesheets | -->
     <link rel="stylesheet" type="text/css" href="css/jbrauer.css">
     <link rel="stylesheet" type="text/css" href="js/vendor/jquery-autocomplete/styles.css">
     <link rel="stylesheet" type="text/css" href="css/foundation.css">
@@ -12,77 +12,112 @@
     <link rel="stylesheet" type="text/css" href="css/shame.css">
   </head>
   <body>
-    <!-- navigation -->
-    <div class="row expanded">
-      <div class="top-bar" style="box-shadow: 0px 4px 16px #CCC; -webkit-transition: 1s ease all;">
-        <div class="jb-wrapper" style="margin: 0 auto; max-width: 1200px; width: auto;">
-          <div class="row expanded" style="margin-bottom: 16px;">
-            <div class="column">
+    <!-- | Header & Navigation Section | -->
+    <div id="section-header" class="expanded row">
+
+      <!-- | Hero Header | -->
+      <header id="header-hero" class="header-hero">
+        <ul class="menu pull-right hide-for-small-only" style="position: fixed; top:0; right:0; z-index:10; margin: 1rem;">
+          <li><a href="#" class="small success button">Hire Me!</a></li>
+        </ul>
+        <a href="index.php" class="pull-right hide-for-medium" style="position: fixed; top:0; right:0; z-index:10; padding: 1rem;"><img src="img/logo/jbrauer/png/logo-alt-jbrauer.png" alt="jBrauer Web Design &amp; Development" class="logo-topbar"></a>
+      </header>
+
+      <!-- | Sticky Navigation | -->
+      <nav data-sticky-container>
+        <div class="sticky" data-sticky data-margin-top="0" data-top-anchor="header-hero:bottom" data-btm-anchor="section-main:bottom" data-sticky-on="small">
+
+          <!-- | Responsive Menu Toggle | -->
+          <div id="responsive-menu-toggle" class="top-bar hide-for-medium">
+            <div class="top-bar-title">
+              <div class="pull-left" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+                <button id="responsive-menu-btn" class="small button" data-toggle><i class="fa fa-md fa-bars"></i> Menu</button>
+              </div> <!-- /data-responsive-toggle -->
+              <!-- <a href="index.php" class="pull-right"><img src="img/logo/jbrauer/png/logo-alt-jbrauer.png" alt="jBrauer Web Design &amp; Development" class="logo-topbar"></a> -->
+            </div> <!-- /.top-bar-title -->
+          </div><!-- /#responsive-menu-toggle -->
+
+          <!-- | Responsive Menu | -->
+          <div id="responsive-menu" class="multi-bar">
+
+            <!-- | Multi-bar Top Bar 1 | -->
+            <div class="top-bar hide-for-small-only">
               <div class="top-bar-title">
-                <img class="logo-topbar" data-interchange="[img/logo/jbrauer/svg/jbrauer-alt-logo.svg, small], [img/logo/jbrauer/svg/jbrauer-logo.svg, medium], [img/logo/jbrauer/svg/jbrauer-logo.svg, large]" alt="jordan brauer logo" src="img/logo/jbrauer/svg/jbrauer-alt-logo.svg">
-                <div class="subheader" style="font: 12px consolas, monospace">Web Design &amp; Development</div> <!-- /.subheader -->
+                <a href="index.php"><img src="img/logo/jbrauer/png/logo-jbrauer.png" alt="jBrauer Web Design &amp; Development" class="logo-topbar"></a>
               </div> <!-- /.top-bar-title -->
-              <ul class="menu float-right">
-                <!-- <li><a href="#"><i class="fa fa-md fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-md fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-md fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa fa-md fa-github"></i></a></li>
-                <li><a href="#"><i class="fa fa-md fa-codepen"></i></a></li> -->
-                <li><a class="small success button" href="#">Hire Me!</a></li>
-              </ul>
-            </div> <!-- /.column-->
-          </div> <!-- /.row -->
-          <div class="row expanded">
-            <div class="column">
-              <div data-responsive-toggle="responsive-menu-1" data-hide-for="medium">
-                <button id="menu-btn" class="small button" data-toggle style="margin-bottom: 8px;"><i class="fa fa-md fa-bars"></i> Menu</button>
-              </div><!-- /data-responsive-toggle -->
-              <div id="responsive-menu-1">
-                <div class="top-bar-left">
-                  <ul class="dropdown menu vertical medium-horizontal" data-dropdown-menu>
-                    <li class="active"><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Resume</a></li>
-                  </ul>
-                </div> <!-- /.top-bar-left -->
-                <div class="top-bar-right">
-                  <ul class="menu">
-                    <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-lg fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-lg fa-github"></i></a></li>
-                    <li><a href="#"><i class="fa fa-lg fa-codepen"></i></a></li>
-                    <!-- <li><a class="tiny success button" href="#">Hire Me!</a></li> -->
-                  </ul>
-                </div> <!-- /.top-bar-right-->
-              </div> <!-- /#responsive-menu-1 -->
-            </div> <!-- /.column -->
-          </div> <!-- /.row -->
-        </div>
-      </div> <!-- /.top-bar -->
-      <!--
-      <div class="row expanded">
-        <nav aria-label="You are here:" role="navigation">
-          <ul class="breadcrumbs">
-            <li><a href="#">Home</a></li>
-          </ul>
-        </nav>
-      </div>
-      -->
-    </div><!-- /.row -->
-    <!-- /navigation -->
+              <!-- <ul class="menu pull-right">
+                <li><a href="#" class="small success button">Hire Me!</a></li>
+              </ul> -->
+              <div class="top-bar-left">
+              </div> <!-- /.top-bar-left -->
+              <div class="top-bar-right">
+              </div> <!-- /.top-bar-right -->
+            </div> <!-- /#top-bar-1 -->
 
-    <!-- main content -->
-    <div class="row column" style="background: #0b9;">
-      <!-- <p>hello</p> -->
-    </div>
+            <!-- | Multi-bar Top Bar 2 | -->
+            <div id="top-bar-2" class="top-bar">
+              <div class="top-bar-title">
+              </div> <!-- /.top-bar-title -->
+              <div class="top-bar-left">
+                <ul class="menu vertical medium-horizontal">
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">Resume</a></li>
+                </ul>
+              </div> <!-- /.top-bar-left -->
+              <div class="top-bar-right">
+                <ul class="menu pull-left">
+                  <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-lg fa-github"></i></a></li>
+                  <li><a href="#"><i class="fa fa-lg fa-codepen"></i></a></li>
+                  <li><a href="#"><i class="fa fa-lg fa-linkedin"></i></a></li>
+                </ul>
+                <ul class="menu pull-right pull-left-for-small-only hide-for-medium">
+                  <li><a href="#" class="tiny success button">Hire Me!</a></li>
+                </ul>
+              </div> <!-- /.top-bar-right -->
+            </div> <!-- /#top-bar-2 -->
+          </div> <!-- /#responsive-menu -->
+        </div> <!-- /.sticky -->
+      </nav>
+    </div> <!-- /#section-header -->
 
-    <!-- footer -->
-    <div class="row expanded">
-    </div>
+    <!-- | Main Content Section | -->
+    <div id="section-main">
+      <div class="row">
+        <div class="columns small-12 medium-4 large-4">
+          <div class="path-item">
+            <div class="circle">
+              <h3>1</h3>
+            </div> <!-- /.circle -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div> <!-- /.path-item -->
+        </div> <!-- /.column -->
+        <div class="columns small-12 medium-4 large-4">
+        </div> <!-- /.column -->
+        <div class="columns small-12 medium-4 large-4">
+        </div> <!-- /.column -->
+      </div> <!-- /.row -->
 
-    <!-- scripts -->
+      <div class="row column buffer-m-t-64">
+        <h3>Creating a sticky Navigation Menu with Top Bar!</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate est in inventore fugit repudiandae aliquid maxime minus vitae quae quidem? Non saepe harum eaque voluptatem eveniet sapiente, explicabo expedita facere.</p>
+        <hr>
+        <img src="http://placehold.it/1200x1200&text=content" alt="placeholder1" class="thumbnail">
+        <hr>
+        <img src="http://placehold.it/1200x1200&text=content" alt="placeholder2" class="thumbnail">
+        <hr>
+        <img src="http://placehold.it/1200x1200&text=content" alt="placeholder3" class="thumbnail">
+      </div> <!-- /.expanded row -->
+    </div> <!-- /#section-main -->
+
+    <!-- | Footer Section | -->
+    <div id="section-footer" class="row expanded">
+    </div> <!-- /#section-main -->
+
+    <!-- | External Scripts | -->
     <script type="text/javascript" src="js/vendor/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="js/vendor/modernizr/modernizr.js"></script>
     <script type="text/javascript" src="js/vendor/lodash/lodash.min.js"></script>
@@ -91,21 +126,39 @@
     <script type="text/javascript" src="js/vendor/jquery-autocomplete/jquery.autocomplete.min.js"></script>
     <!-- <script type="text/javascript" src="js/jbrauer/jbrauer.js"></script> -->
     <script type="text/javascript" src="js/foundation/foundation.js"></script>
+    <!-- <script type="text/javascript" src="js/foundation/plugins/foundation.sticky.js"></script> -->
     <!-- <script src="https://use.fontawesome.com/c477074d77.js"></script> -->
-    <script type="text/javascript">
-      $(document).foundation();
-    </script>
-    <script type="text/javascript">
-    $(document).ready(function(){
-      var $menu_btn = $('#menu-btn');
 
-      $menu_btn.on('click', function(){
-        if (!$menu_btn.hasClass('alert')) {
-          $menu_btn.addClass('alert')
-                   .html('<i class="fa fa-md fa-times"></i> Close');
-        } else if ($menu_btn.hasClass('alert')) {
-          $menu_btn.removeClass('alert')
-                   .html('<i class="fa fa-md fa-bars"></i> Menu');
+    <!-- | Internal Script | -->
+    <script type="text/javascript">
+    // initalize foundation.
+    $(document).foundation();
+
+    // declare variables.
+    var $top_bar = $('.top-bar'),
+        $menu_btn = $('#responsive-menu-btn');
+
+    // top bar sticky shrink class toggle.
+    $top_bar.on('sticky.zf.stuckto:top', function() {
+      var $this = $(this);
+
+      $this.addClass('shrink');
+    }).on('sticky.zf.unstuckfrom:top', function() {
+      var $this = $(this);
+
+      $this.removeClass('shrink');
+    })
+
+    // top bar responsive menu button context toggle.
+    $menu_btn.on('click', function(){
+      $this = $(this);
+
+      $this.toggleClass('alert').promise().done(function()
+      {
+        if ($this.hasClass('alert')) {
+          $this.html('<i class="fa fa-md fa-times"></i> Close');
+        } else {
+          $this.html('<i class="fa fa-md fa-bars"></i> Menu');
         }
       });
     });
