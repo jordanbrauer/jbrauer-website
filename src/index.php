@@ -13,19 +13,38 @@
   </head>
   <body>
     <!-- | Header & Navigation Section | -->
-    <div id="section-header" class="expanded row">
+    <div id="section-header" class="expanded row" style="height:522px;"> <!-- height must be equal to full height before collapse to precent jarring -->
+
+      <!-- | Top Bar 1 | -->
+      <div class="top-bar" style="padding:1rem;">
+        <div class="top-bar-title">
+          <a href="index.php">
+            <img src="img/logo/jbrauer/png/logo-banner-jbrauer.png" alt="jBrauer Web Design &amp; Development" class="logo-topbar-md">
+            <br>
+            <small class="subheader ff-consolas">Web Design &amp; Development</small>
+          </a>
+
+          <!-- | Small logo | -->
+          <a id="top-bar-logo" href="index.php" class="pull-left text-center hide" style="position: fixed; top:0; left:0; z-index:10; padding: 0.75rem;">
+            <img src="img/logo/jbrauer/svg/logo-avatar-jbrauer.svg" alt="jBrauer Web Design &amp; Development" class="logo-topbar-sm">
+            <br>
+            <small class="subheader ff-consolas" style="font-size:7px;">Web Design &amp; Development</small>
+          </a>
+
+          <!-- | Medium hire me button | -->
+          <a id="btn-hire" class="small success button" href="#" style="position: fixed; top:0; right:0; z-index:10; margin: 0.75rem;">Hire Me!</a>
+
+          <div class="clearfix"></div>
+        </div> <!-- /.top-bar-title -->
+      </div> <!-- /#top-bar-1 -->
 
       <!-- | Hero Header | -->
       <header id="header-hero" class="header-hero">
-        <ul class="menu pull-right hide-for-small-only" style="position: fixed; top:0; right:0; z-index:10; margin: 1rem;">
-          <li><a href="#" class="small success button">Hire Me!</a></li>
-        </ul>
-        <a href="index.php" class="pull-right hide-for-medium" style="position: fixed; top:0; right:0; z-index:10; padding: 1rem;"><img src="img/logo/jbrauer/png/logo-alt-jbrauer.png" alt="jBrauer Web Design &amp; Development" class="logo-topbar"></a>
       </header>
 
       <!-- | Sticky Navigation | -->
       <nav data-sticky-container>
-        <div class="sticky" data-sticky data-margin-top="0" data-top-anchor="header-hero:bottom" data-btm-anchor="section-main:bottom" data-sticky-on="small">
+        <div id="sticky-navigation" class="sticky" data-sticky data-margin-top="0" data-top-anchor="header-hero:bottom" data-btm-anchor="section-main:bottom" data-sticky-on="small">
 
           <!-- | Responsive Menu Toggle | -->
           <div id="responsive-menu-toggle" class="top-bar hide-for-medium">
@@ -33,7 +52,6 @@
               <div class="pull-left" data-responsive-toggle="responsive-menu" data-hide-for="medium">
                 <button id="responsive-menu-btn" class="small button" data-toggle><i class="fa fa-md fa-bars"></i> Menu</button>
               </div> <!-- /data-responsive-toggle -->
-              <!-- <a href="index.php" class="pull-right"><img src="img/logo/jbrauer/png/logo-alt-jbrauer.png" alt="jBrauer Web Design &amp; Development" class="logo-topbar"></a> -->
             </div> <!-- /.top-bar-title -->
           </div><!-- /#responsive-menu-toggle -->
 
@@ -41,18 +59,15 @@
           <div id="responsive-menu" class="multi-bar">
 
             <!-- | Multi-bar Top Bar 1 | -->
-            <div class="top-bar hide-for-small-only">
-              <div class="top-bar-title">
-                <a href="index.php"><img src="img/logo/jbrauer/png/logo-jbrauer.png" alt="jBrauer Web Design &amp; Development" class="logo-topbar"></a>
-              </div> <!-- /.top-bar-title -->
-              <!-- <ul class="menu pull-right">
-                <li><a href="#" class="small success button">Hire Me!</a></li>
-              </ul> -->
-              <div class="top-bar-left">
-              </div> <!-- /.top-bar-left -->
-              <div class="top-bar-right">
-              </div> <!-- /.top-bar-right -->
-            </div> <!-- /#top-bar-1 -->
+            <!-- <div class="top-bar hide-for-small-only">
+              <div class="top-bar-title text-center">
+                <a href="index.php">
+                  <img src="img/logo/jbrauer/png/logo-banner-jbrauer.png" alt="jBrauer Web Design &amp; Development" class="logo-topbar-md">
+                  <br>
+                  <small class="subheader ff-consolas">Web Design &amp; Development</small>
+                </a>
+              </div> /.top-bar-title
+            </div> /#top-bar-1 -->
 
             <!-- | Multi-bar Top Bar 2 | -->
             <div id="top-bar-2" class="top-bar">
@@ -60,7 +75,7 @@
               </div> <!-- /.top-bar-title -->
               <div class="top-bar-left">
                 <ul class="menu vertical medium-horizontal">
-                  <li><a href="#">About</a></li>
+                  <li class="active"><a href="#">About</a></li>
                   <li><a href="#">Services</a></li>
                   <li><a href="#">Contact</a></li>
                   <li><a href="#">Resume</a></li>
@@ -73,10 +88,11 @@
                   <li><a href="#"><i class="fa fa-lg fa-github"></i></a></li>
                   <li><a href="#"><i class="fa fa-lg fa-codepen"></i></a></li>
                   <li><a href="#"><i class="fa fa-lg fa-linkedin"></i></a></li>
+                  <!-- <li><a href="#" class="small success button">Hire Me!</a></li> -->
                 </ul>
-                <ul class="menu pull-right pull-left-for-small-only hide-for-medium">
-                  <li><a href="#" class="tiny success button">Hire Me!</a></li>
-                </ul>
+                <!-- <ul class="menu pull-right pull-left-for-small-only">
+                  <li><a href="#" class="small success button">Hire Me!</a></li>
+                </ul> -->
               </div> <!-- /.top-bar-right -->
             </div> <!-- /#top-bar-2 -->
           </div> <!-- /#responsive-menu -->
@@ -86,6 +102,12 @@
 
     <!-- | Main Content Section | -->
     <div id="section-main">
+      <div class="row column">
+        <h3>Creating a sticky Navigation Menu with Top Bar!</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate est in inventore fugit repudiandae aliquid maxime minus vitae quae quidem? Non saepe harum eaque voluptatem eveniet sapiente, explicabo expedita facere.</p>
+        <hr>
+      </div><!-- /.row -->
+
       <div class="row">
         <div class="columns small-12 medium-4 large-4">
           <div class="path-item">
@@ -96,8 +118,20 @@
           </div> <!-- /.path-item -->
         </div> <!-- /.column -->
         <div class="columns small-12 medium-4 large-4">
+          <div class="path-item">
+            <div class="circle">
+              <h3>2</h3>
+            </div> <!-- /.circle -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div> <!-- /.path-item -->
         </div> <!-- /.column -->
         <div class="columns small-12 medium-4 large-4">
+          <div class="path-item">
+            <div class="circle">
+              <h3>3</h3>
+            </div> <!-- /.circle -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div> <!-- /.path-item -->
         </div> <!-- /.column -->
       </div> <!-- /.row -->
 
@@ -110,12 +144,12 @@
         <img src="http://placehold.it/1200x1200&text=content" alt="placeholder2" class="thumbnail">
         <hr>
         <img src="http://placehold.it/1200x1200&text=content" alt="placeholder3" class="thumbnail">
-      </div> <!-- /.expanded row -->
+      </div> <!-- /.row -->
     </div> <!-- /#section-main -->
 
     <!-- | Footer Section | -->
     <div id="section-footer" class="row expanded">
-    </div> <!-- /#section-main -->
+    </div> <!-- /#section-footer -->
 
     <!-- | External Scripts | -->
     <script type="text/javascript" src="js/vendor/jquery/jquery.min.js"></script>
@@ -135,19 +169,38 @@
     $(document).foundation();
 
     // declare variables.
-    var $top_bar = $('.top-bar'),
+    var $window = $(window);
+        $top_bar = $('.top-bar'),
         $menu_btn = $('#responsive-menu-btn');
 
     // top bar sticky shrink class toggle.
-    $top_bar.on('sticky.zf.stuckto:top', function() {
-      var $this = $(this);
+    // $top_bar.on('sticky.zf.stuckto:top', function() {
+    //   var $this = $(this);
+    //
+    //   $this.addClass('shrink');
+    // }).on('sticky.zf.unstuckfrom:top', function() {
+    //   var $this = $(this);
+    //
+    //   $this.removeClass('shrink');
+    // })
 
-      $this.addClass('shrink');
-    }).on('sticky.zf.unstuckfrom:top', function() {
-      var $this = $(this);
+    function minifyLogo()
+    {
+      var $top_bar_logo = $('#top-bar-logo')
+          $pos_y_win = $window.scrollTop();
 
-      $this.removeClass('shrink');
-    })
+      if ($pos_y_win >= 471) {
+        $top_bar_logo.removeClass('hide');
+      } else {
+        $top_bar_logo.addClass('hide');
+      }
+
+      console.log('Window Position: ' + $pos_y_win);
+    }
+
+    $(window).on('scroll', function(){
+      minifyLogo();
+    });
 
     // top bar responsive menu button context toggle.
     $menu_btn.on('click', function(){

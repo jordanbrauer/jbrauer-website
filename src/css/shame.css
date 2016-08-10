@@ -12,8 +12,8 @@ li:focus {
   }
 }
 .header-hero {
-  padding: 10rem 0;
-  background: url(http://placehold.it/2000x500&content=Hero-Image) center center no-repeat;
+  padding: 12rem 0;
+  background: url(../img/bg/hero4.jpg) center center no-repeat;
   background-size: cover;
 }
 
@@ -30,7 +30,9 @@ li:focus {
 }
 
 .is-stuck .top-bar {
-  padding: 1rem;
+  padding: 0.75rem;
+  padding-right: 84px;
+  padding-left: 124px;
   transition: all .2s ease;
 }
 

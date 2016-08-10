@@ -57,24 +57,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-#section-main {
-  margin: 64px 0 64px 0;
+.ff-consolas {
+  font-family: Consolas,monaco,monospace;
 }
 
-.logo-topbar {
+#section-main {
+  padding: 64px 0 64px 0;
+}
+
+.logo-topbar-sm {
   width: auto;
-  height: 36px;
-  max-height: 36px;
+  height: 22px;
+  max-height: 22px;
 }
-.logo-icon {
-  width: 64px;
-  max-width: 64px;
-  height: auto;
-}
-.logo-alt {
-  width: 128px;
-  max-width: 128px;
-  height: auto;
+.logo-topbar-md {
+  width: auto;
+  height: 32px;
+  max-height: 32px;
 }
 
 .buffer-m-t-8 {
