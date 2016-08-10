@@ -15,7 +15,7 @@
     <!-- | Header & Navigation Section | -->
     <div id="section-header" class="expanded row" style="height:522px;"> <!-- height must be equal to full height before collapse to precent jarring -->
 
-      <!-- | Top Bar 1 | -->
+      <!-- | Top Bar | -->
       <div class="top-bar" style="padding:1rem;">
         <div class="top-bar-title">
           <a href="index.php">
@@ -24,15 +24,20 @@
             <small class="subheader ff-consolas">Web Design &amp; Development</small>
           </a>
 
-          <!-- | Small logo | -->
-          <a id="top-bar-logo" href="index.php" class="pull-left text-center hide" style="position: fixed; top:0; left:0; z-index:10; padding: 0.75rem;">
-            <img src="img/logo/jbrauer/svg/logo-avatar-jbrauer.svg" alt="jBrauer Web Design &amp; Development" class="logo-topbar-sm">
-            <br>
-            <small class="subheader ff-consolas" style="font-size:7px;">Web Design &amp; Development</small>
-          </a>
+
+
+          <!-- | Small logo (medium screen +) | -->
+          <div class="top-bar-logo text-center hide-for-small-only hide" style="position:fixed; top:0; z-index:10; margin:0.75rem;">
+            <a href="index.php" style="display: inline-block;">
+              <img src="img/logo/jbrauer/svg/logo-avatar-jbrauer.svg" alt="jBrauer Web Design &amp; Development" class="logo-topbar-sm">
+              <br>
+              <small class="subheader ff-consolas" style="font-size:7px;">Web Design &amp; Development</small>
+            </a>
+          </div> <!-- /#top-bar-logo -->
 
           <!-- | Medium hire me button | -->
-          <a id="btn-hire" class="small success button" href="#" style="position: fixed; top:0; right:0; z-index:10; margin: 0.75rem;">Hire Me!</a>
+          <a class="small success button" href="#" style="position: absolute; top:0; right:0; z-index:10; margin: 0.75rem;">Hire Me!</a>
+          <a id="btn-hire" class="small success button hide" href="#" style="position: fixed; top:0; right:0; z-index:10; margin: 0.75rem;">Hire Me!</a>
 
           <div class="clearfix"></div>
         </div> <!-- /.top-bar-title -->
@@ -48,11 +53,18 @@
 
           <!-- | Responsive Menu Toggle | -->
           <div id="responsive-menu-toggle" class="top-bar hide-for-medium">
-            <div class="top-bar-title">
+            <div class="top-bar-title" style="width: auto;">
               <div class="pull-left" data-responsive-toggle="responsive-menu" data-hide-for="medium">
                 <button id="responsive-menu-btn" class="small button" data-toggle><i class="fa fa-md fa-bars"></i> Menu</button>
               </div> <!-- /data-responsive-toggle -->
+
             </div> <!-- /.top-bar-title -->
+            <!-- | Small logo (small screen) | -->
+            <a class="top-bar-logo text-center show-for-small-only hide" href="index.php" style="display: inline-block; margin: 0 auto;">
+              <img src="img/logo/jbrauer/svg/logo-avatar-jbrauer.svg" alt="jBrauer Web Design &amp; Development" class="logo-topbar-sm">
+              <br>
+              <small class="subheader ff-consolas" style="font-size:7px;">Web Design &amp; Development</small>
+            </a> <!-- /#top-bar-logo -->
           </div><!-- /#responsive-menu-toggle -->
 
           <!-- | Responsive Menu | -->
@@ -94,6 +106,7 @@
                   <li><a href="#" class="small success button">Hire Me!</a></li>
                 </ul> -->
               </div> <!-- /.top-bar-right -->
+
             </div> <!-- /#top-bar-2 -->
           </div> <!-- /#responsive-menu -->
         </div> <!-- /.sticky -->
@@ -186,16 +199,20 @@
 
     function minifyLogo()
     {
-      var $top_bar_logo = $('#top-bar-logo')
+      var $top_bar_logo = $('.top-bar-logo'),
+          $hire_btn = $('#btn-hire'),
           $pos_y_win = $window.scrollTop();
 
       if ($pos_y_win >= 471) {
+        $hire_btn.removeClass('hide');
         $top_bar_logo.removeClass('hide');
       } else {
+        $hire_btn.addClass('hide');
         $top_bar_logo.addClass('hide');
       }
 
-      console.log('Window Position: ' + $pos_y_win);
+      // test log.
+      // console.log('Window Position: ' + $pos_y_win);
     }
 
     $(window).on('scroll', function(){

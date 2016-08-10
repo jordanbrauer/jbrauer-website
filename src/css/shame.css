@@ -31,9 +31,13 @@ li:focus {
 
 .is-stuck .top-bar {
   padding: 0.75rem;
-  padding-right: 84px;
-  padding-left: 124px;
   transition: all .2s ease;
+}
+@media screen and (min-width: 40em) {
+  .is-stuck .top-bar {
+    padding-right: 84px;
+    padding-left: 128px;
+  }
 }
 
 #responsive-menu-toggle {
