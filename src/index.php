@@ -1,8 +1,8 @@
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jordan Brauer | Welcome</title>
     <!-- | External Stylesheets | -->
     <link rel="stylesheet" type="text/css" href="css/jbrauer.css">
@@ -13,13 +13,13 @@
   </head>
   <body>
     <!-- | Header & Navigation Section | -->
-    <div id="section-header" class="expanded row" style="height:522px;"> <!-- height must be equal to full height before collapse to precent jarring -->
+    <div id="section-header" class="expanded row" style="height:522px;"> <!-- height must be equal to full height before collapse to prevent jarring -->
 
       <!-- | Top Bar | -->
       <div class="top-bar" style="padding:1rem;">
         <div class="top-bar-title">
           <a href="index.php">
-            <img data-interchange="[img/logo/jbrauer/png/logo-avatar-jbrauer-cropped.png, small], [img/logo/jbrauer/png/logo-banner-jbrauer-cropped.png, large]" alt="jBrauer Web Design &amp; Development" class="logo-topbar-md">
+            <img data-interchange="[img/logo/jbrauer/png/logo-jbrauer-icon-cropped-rgb.png, small], [img/logo/jbrauer/png/logo-jbrauer-banner-cropped-rgb.png, large]" alt="jBrauer Web Design &amp; Development" class="logo-topbar-md">
             <!-- <br>
             <small class="subheader ff-consolas">Web Design &amp; Development</small> -->
           </a>
@@ -27,7 +27,7 @@
           <!-- | Small logo (medium screen +) | -->
           <div class="top-bar-logo text-center hide-for-small-only hide" style="position:fixed; top:0; z-index:10; margin:0.75rem;">
             <a href="index.php" style="display: inline-block;">
-              <img src="img/logo/jbrauer/svg/logo-avatar-jbrauer.svg" alt="jBrauer Web Design &amp; Development" class="logo-topbar-sm">
+              <img src="img/logo/jbrauer/svg/logo-jbrauer-icon-rgb.svg" alt="jBrauer Web Design &amp; Development" class="logo-topbar-sm">
               <br>
               <small class="subheader ff-consolas" style="font-size:7px;">Web Design &amp; Development</small>
             </a>
@@ -64,9 +64,10 @@
               </div> <!-- /data-responsive-toggle -->
 
             </div> <!-- /.top-bar-title -->
+
             <!-- | Small logo (small screen) | -->
             <a class="top-bar-logo text-center show-for-small-only hide" href="index.php" style="display: inline-block; margin: 0 auto;">
-              <img src="img/logo/jbrauer/svg/logo-avatar-jbrauer.svg" alt="jBrauer Web Design &amp; Development" class="logo-topbar-sm">
+              <img src="img/logo/jbrauer/svg/logo-jbrauer-icon-rgb.svg" alt="jBrauer Web Design &amp; Development" class="logo-topbar-sm">
               <br>
               <small class="subheader ff-consolas" style="font-size:7px;">Web Design &amp; Development</small>
             </a> <!-- /#top-bar-logo -->
@@ -312,10 +313,11 @@
             <li class="subheader">jBrauer Web Design &amp; Development &copy; 2016</li>
           </ul>
           <ul class="horizontal menu pull-right">
+            <li><a href="#">Affiliates</a></li>
+            <li><a href="#">Contact</a></li>
             <li><a href="#">FAQ</a></li>
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Contact</a></li>
           </ul>
           <span class="clearfix"></span>
         </div> <!-- /.row -->
