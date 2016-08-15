@@ -1,3 +1,3 @@
 <?php
-// require_once 'vendor/smarty/Smarty.class.php';
+require_once 'vendor/smarty/config/setup.php';
 ?>

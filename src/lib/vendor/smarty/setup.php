@@ -1,6 +1,6 @@
 <?php
 // load Smarty library.
-require_once '../Smarty.class.php';
+require_once 'Smarty.class.php';
 
 class Template extends Smarty {
   public function __construct() {
@@ -8,10 +8,10 @@ class Template extends Smarty {
 
     parent::__construct();
 
-    $this->setTemplateDir('../../../../templates/');
-    $this->setCompileDir('../../../../cache/smarty/compiled/');
-    $this->setConfigDir('/');
-    $this->setCacheDir('../../../../cache/smarty/cache/');
+    $this->setTemplateDir('templates/');
+    $this->setCompileDir('cache/smarty/compiled/');
+    $this->setConfigDir('lib/vendor/smarty/config/');
+    $this->setCacheDir('cache/smarty/cache/');
 
     $this->caching = Smarty::CACHING_LIFETIME_CURRENT;
     $this->assign('app_name', 'jBrauer Website');

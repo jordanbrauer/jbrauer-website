@@ -1,11 +1,11 @@
 <?php
 /**
- * Title: index.php
+ * Title: about.php
  * Version: 0.0.1
  * Company: jBrauer Web Design & Development
  * Author: Jordan Brauer <jbrauer.inc@gmail.com>
  * Created: 15/08/2016
- * Description: Main entry point of my website.
+ * Description: About page of my website.
  */
 
 /**
@@ -32,8 +32,9 @@ $template->assign('page_lang', 'en');
  *
  * eg.
  * $template->assign('page_title', $page_title);
+ * {$page_title}
  */
-$template->assign('page_title', 'Home');
+$template->assign('page_title', 'About');
 
 /**
  * Render the $template.
@@ -41,5 +42,5 @@ $template->assign('page_title', 'Home');
  * eg.
  * $template->display('path/to/template.tpl');
  */
-$template->display('templates/index.tpl');
+$template->display('templates/page.tpl');
 ?>

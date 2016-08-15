@@ -2430,7 +2430,7 @@ select[multiple] {
   margin-top: -0.5rem;
 }
 .is-active > .accordion-title::before {
-  content: 'ÔÇô';
+  content: '–';
 }
 
 .accordion-content {
