@@ -12,9 +12,23 @@ li:focus {
   }
 }
 .header-hero {
-  padding: 12rem 0;
-  background: url(../img/bg/hero4.jpg) center center no-repeat;
+  padding: 6rem 0;
+  position: relative;
+}
+.header-hero:after {
+  content: "";
+  background: url(../img/bg/hero4.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.33;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 .multi-bar {
@@ -36,7 +50,7 @@ li:focus {
 @media screen and (min-width: 40em) {
   .is-stuck .top-bar {
     padding-right: 84px;
-    padding-left: 128px;
+    padding-left: 156px;
   }
 }
 

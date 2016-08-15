@@ -17,9 +17,23 @@ li:focus{
 
 // Header.
 .header-hero{
-  padding: 12rem 0;
-  background: url(../img/bg/hero4.jpg) center center no-repeat;
-  background-size: cover;
+  padding: 6rem 0;
+  position: relative;
+  &:after{
+    content: "";
+    background: url(../img/bg/hero4.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.33;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
 }
 
 // Multi-bar Top Bar.
@@ -39,7 +53,7 @@ li:focus{
   padding: 0.75rem;
   @media screen and (min-width: 40em) {
     padding-right: 84px;
-    padding-left: 128px;
+    padding-left: 156px;
   }
   transition: all .2s ease;
 }
