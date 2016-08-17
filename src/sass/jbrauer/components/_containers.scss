@@ -1,10 +1,32 @@
+/**
+ * #section-header
+ */
 #section-header{
   margin-bottom: 64px;
+
+  .section-hero{
+    height: 512px;
+  }
+  .section-header{
+    height: 64px;
+  }
 }
+
+/**
+ * #section-main
+ */
 #section-main{
-  padding: 64px 0 0 0;
+  padding: 64px 0 64px 0;
 }
+
+/**
+ * #section-aside
+ */
 #section-aside{
 }
+
+/**
+ * #section-footer
+ */
 #section-footer{
 }

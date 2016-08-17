@@ -5,42 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jBrauer Web Design | {$page_title}</title>
     <!-- | External Stylesheets | -->
-    <link rel="stylesheet" type="text/css" href="css/jbrauer.css">
-    <link rel="stylesheet" type="text/css" href="js/vendor/jquery-autocomplete/styles.css">
     <link rel="stylesheet" type="text/css" href="css/foundation.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/jbrauer.css">
+    <link rel="stylesheet" type="text/css" href="js/vendor/jquery-autocomplete/styles.css">
     <link rel="stylesheet" type="text/css" href="css/shame.css">
   </head>
   <body>
-    {if $page_title == 'Home'}
-    <!-- | Header & Navigation Section | -->
-    <div id="section-header" class="expanded row" style="height:522px;"> <!-- height must be equal to full height before collapse to prevent jarring -->
-
-      <!-- | Top Bar | -->
-      <div class="top-bar" style="padding:1rem;">
+    {*-| Header & Navigation Section |-*}
+    <div id="section-header" class="expanded row {if $page_title == 'Home'}section-hero{else}section-header{/if} multi-bar">
+      {*-| Top Bar |-*}
+      <div class="top-bar">
         <div class="top-bar-title">
+          {*-| Medium logo |-*}
           <a href="index.php">
-            <img data-interchange="[img/logo/jbrauer/png/logo-jbrauer-icon-cropped-rgb.png, small], [img/logo/jbrauer/png/logo-jbrauer-banner-cropped-rgb.png, large]" alt="jBrauer Web Design &amp; Development" class="logo-topbar-md">
-            <!-- <br>
-            <small class="subheader ff-consolas">Web Design &amp; Development</small> -->
+            <img data-interchange="[img/logo/jbrauer/png/logo-jbrauer-icon-cropped-rgb.png, small], [img/logo/jbrauer/png/logo-jbrauer-banner-cropped-rgb.png, large]" alt="jBrauer Web Design &amp; Development" class="logo-portrait">
           </a>
 
           <!-- | Small logo (medium screen +) | -->
           <div class="top-bar-logo text-center hide-for-small-only hide" style="position:fixed; top:0; z-index:10; margin:0.75rem;">
             <a href="index.php" style="display: inline-block;">
-              <img src="img/logo/jbrauer/svg/logo-jbrauer-icon-rgb.svg" alt="jBrauer Web Design &amp; Development" class="logo-topbar-sm">
+              <img src="img/logo/jbrauer/svg/logo-jbrauer-icon-rgb.svg" alt="jBrauer Web Design &amp; Development" class="logo-landscape">
               <br>
               <small class="subheader ff-consolas" style="font-size:7px;">Web Design &amp; Development</small>
             </a>
           </div> <!-- /#top-bar-logo -->
 
-          <!-- | Medium hire me button | -->
+          {*-| Fix/Absolute Right CTA |-*}
           <a class="small hollow button" href="#" style="position: absolute; top:0; right:0; z-index:10; margin: 0.75rem;">Affiliates</a>
           <a id="btn-hire" class="small success button hide" href="#" style="position: fixed; top:0; right:0; z-index:10; margin: 0.75rem;">Hire Me!</a>
 
-          <div class="clearfix"></div>
-        </div> <!-- /.top-bar-title -->
-      </div> <!-- /#top-bar-1 -->
+          <div class="clearfix"></div> {* /.clearfix *}
+        </div> {* /.top-bar-title *}
+      </div> {* /.top-bar *}
+
+      {if $page_title == 'Home'}
 
       <!-- | Hero Header | -->
       <header id="header-hero" class="header-hero text-center">
@@ -53,9 +52,11 @@
         <a class="large success button" href="#">Hire Me!</a>
       </header>
 
+      {/if}
+
       <!-- | Sticky Navigation | -->
       <nav data-sticky-container>
-        <div id="sticky-navigation" class="sticky" data-sticky data-margin-top="0" data-top-anchor="header-hero:bottom" data-btm-anchor="section-footer:bottom" data-sticky-on="small">
+        <div id="sticky-navigation" class="sticky" data-sticky data-margin-top="0" data-top-anchor="{if $page_title == 'Home'}header-hero{else}top-bar-1{/if}:bottom" data-btm-anchor="section-footer:bottom" data-sticky-on="small">
 
           <!-- | Responsive Menu Toggle | -->
           <div id="responsive-menu-toggle" class="top-bar hide-for-medium">
@@ -68,25 +69,14 @@
 
             <!-- | Small logo (small screen) | -->
             <a class="top-bar-logo text-center show-for-small-only hide" href="index.php" style="display: inline-block; margin: 0 auto;">
-              <img src="img/logo/jbrauer/svg/logo-jbrauer-icon-rgb.svg" alt="jBrauer Web Design &amp; Development" class="logo-topbar-sm">
+              <img src="img/logo/jbrauer/svg/logo-jbrauer-icon-rgb.svg" alt="jBrauer Web Design &amp; Development" class="logo-portrait">
               <br>
               <small class="subheader ff-consolas" style="font-size:7px;">Web Design &amp; Development</small>
             </a> <!-- /#top-bar-logo -->
           </div><!-- /#responsive-menu-toggle -->
 
           <!-- | Responsive Menu | -->
-          <div id="responsive-menu" class="multi-bar">
-
-            <!-- | Multi-bar Top Bar 1 | -->
-            <!-- <div class="top-bar hide-for-small-only">
-              <div class="top-bar-title text-center">
-                <a href="index.php">
-                  <img src="img/logo/jbrauer/png/logo-banner-jbrauer.png" alt="jBrauer Web Design &amp; Development" class="logo-topbar-md">
-                  <br>
-                  <small class="subheader ff-consolas">Web Design &amp; Development</small>
-                </a>
-              </div> /.top-bar-title
-            </div> /#top-bar-1 -->
+          <div id="responsive-menu">
 
             <!-- | Multi-bar Top Bar 2 | -->
             <div id="top-bar-2" class="top-bar">
@@ -107,11 +97,7 @@
                   <li><a href="#"><i class="fa fa-lg fa-github"></i></a></li>
                   <li><a href="#"><i class="fa fa-lg fa-codepen"></i></a></li>
                   <li><a href="#"><i class="fa fa-lg fa-linkedin"></i></a></li>
-                  <!-- <li><a href="#" class="small success button">Hire Me!</a></li> -->
                 </ul>
-                <!-- <ul class="menu pull-right pull-left-for-small-only">
-                  <li><a href="#" class="small success button">Hire Me!</a></li>
-                </ul> -->
               </div> <!-- /.top-bar-right -->
 
             </div> <!-- /#top-bar-2 -->
@@ -119,9 +105,6 @@
         </div> <!-- /.sticky -->
       </nav>
     </div> <!-- /#section-header -->
-    {else}
-      {* default header/navigation bar *}
-    {/if}
 
     <!-- | Main Content Section | -->
     <div id="section-main">

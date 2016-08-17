@@ -1,83 +1,99 @@
 @charset "UTF-8";
 /*ForceCharset : ¡*/
-/* compass browser reset */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
-html {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-q, blockquote {
-  quotes: none;
-}
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-a img {
-  border: none;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
-
 .ff-consolas {
   font-family: Consolas,monaco,monospace;
 }
 
+/**
+ * #section-header
+ */
 #section-header {
   margin-bottom: 64px;
 }
-
-#section-main {
-  padding: 64px 0 0 0;
+#section-header .section-hero {
+  height: 512px;
+}
+#section-header .section-header {
+  height: 64px;
 }
 
-.logo-topbar-sm {
+/**
+ * #section-main
+ */
+#section-main {
+  padding: 64px 0 64px 0;
+}
+
+/**
+ * #section-aside
+ */
+/**
+ * #section-footer
+ */
+.multi-bar .top-bar {
+  padding: 1.75rem;
+  transition: all .2s ease;
+}
+.multi-bar .top-bar:not(:last-child) {
+  padding: 1rem;
+  background: #efefef;
+}
+.multi-bar .is-stuck .top-bar {
+  padding: 0.75rem;
+  transition: all .2s ease;
+}
+@media screen and (min-width: 40em) {
+  .multi-bar .is-stuck .top-bar {
+    padding-right: 84px;
+    padding-left: 156px;
+  }
+}
+.multi-bar [data-sticky] {
+  width: 100%;
+}
+.multi-bar .logo-landscape {
   width: auto;
   height: 22px;
   max-height: 22px;
 }
-.logo-topbar-md {
+.multi-bar .logo-portrait {
   width: auto;
   height: 32px;
   max-height: 32px;
+}
+@media screen and (max-width: 430px) {
+  .multi-bar .pull-left-for-small-only {
+    float: left !important;
+  }
+}
+.multi-bar #responsive-menu-toggle {
+  background: #efefef;
+}
+.multi-bar #responsive-menu-toggle .top-bar-title {
+  width: 100%;
+}
+.multi-bar #responsive-menu-toggle #responsive-menu-btn {
+  margin-bottom: 0;
+}
+
+.header-hero {
+  padding: 6rem 0;
+  position: relative;
+}
+.header-hero:after {
+  content: "";
+  background: url(../img/bg/hero4.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.33;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 .buffer-m-t-8 {
