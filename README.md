@@ -1,5 +1,9 @@
 # jbrauer-website
 
+## ATTENTION!
+
+This repository has moved to [here](https://github.com/jordanbrauer/jordanbrauer.github.io).
+
 __Summary:__
 My portfolio source code and process documentation for educational purposes. Anyone can reference this project for his/her own learning purposes. Do not copy the project and claim as your own. If you have questions on the matter please contact me [here](https://jordanbrauer.ca).
 
