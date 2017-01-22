@@ -2,10 +2,8 @@
   "name": "jbrauer-website",
   "version": "0.0.1",
   "description": "my portfolio source code. for educational purposes.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "public/index.php",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jordanbrauer/jbrauer-website.git"
@@ -14,27 +12,27 @@
     "portfolio",
     "educational"
   ],
-  "author": "Jordan Brauer <j.brauer@hotmail.com>",
+  "author": "Jordan Brauer <jbrauer.inc@gmail.com>",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/jordanbrauer/jbrauer-website/issues"
   },
   "homepage": "https://github.com/jordanbrauer/jbrauer-website#readme",
   "devDependencies": {
-    "del": "^2.2.1",
-    "foundation-sites": "^6.2.3",
+    "del": "^2.2.2",
+    "foundation-sites": "^6.3.0",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-cache": "^0.4.5",
     "gulp-compass": "^2.1.0",
-    "gulp-concat": "^2.6.0",
+    "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.2",
-    "gulp-imagemin": "^3.0.2",
+    "gulp-imagemin": "^3.1.1",
     "gulp-livereload": "^3.8.1",
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.4",
-    "merge-stream": "^1.0.0",
+    "merge-stream": "^1.0.1",
     "run-sequence": "^1.2.2"
   }
 }
