@@ -140,7 +140,7 @@ return array(
     'maxCachedCloudImageSize' => 0,
     'useCompressedJs' => false,
     /** Debug */
-    'translationDebugOutput' => true,
+    'translationDebugOutput' => false,
     'suppressTemplateErrors' => false,
     /** Memory */
     'phpMaxMemoryLimit' => '768M',
