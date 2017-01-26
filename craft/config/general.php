@@ -150,7 +150,7 @@ return array(
     'showBetaUpdates' => true,
 
     /** Envrionment Variables */
-    'envrionmentVariables' => array(
+    'environmentVariables' => array(
       'basePath' => getenv('CRAFTENV_BASE_URL'),
       'baseUrl' => getenv('CRAFTENV_BASE_PATH'),
     ),
@@ -176,7 +176,7 @@ return array(
     'showBetaUpdates' => true,
 
     /** Envrionment Variables */
-    'envrionmentVariables' => array(
+    'environmentVariables' => array(
       'basePath' => getenv('CRAFTENV_BASE_URL'),
       'baseUrl' => getenv('CRAFTENV_BASE_PATH'),
     ),
@@ -187,7 +187,7 @@ return array(
     'devMode' => false,
 
     /** Envrionment Variables */
-    'envrionmentVariables' => array(
+    'environmentVariables' => array(
       'basePath' => getenv('CRAFTENV_BASE_URL'),
       'baseUrl' => getenv('CRAFTENV_BASE_PATH'),
     ),
