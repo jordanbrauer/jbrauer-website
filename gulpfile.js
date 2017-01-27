@@ -20,5 +20,7 @@ const plugins = require('gulp-load-plugins')({
  * @description Helper function for loading a tasks' script.
  */
 const uses = (task) => {
-  return require('./dev/tasks/' + task)(gulp, plg, plugins);
+  return require('./dev/tasks/' + task)(gulp, pkg, plugins);
 }
+
+gulp.task('fetch:foundation:styles', uses('fetchFoundationStylesTask.js'));
