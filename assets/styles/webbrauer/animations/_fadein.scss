@@ -1,0 +1,50 @@
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity: $fadein_from_opacity; opacity: $fadein_from_opacity_ie9; /* IE9 only */ } to { opacity: $fadein_to_opacity; } }
+@-moz-keyframes fadeIn { from { opacity: $fadein_from_opacity; opacity: $fadein_from_opacity_ie9; /* IE9 only */ } to { opacity: $fadein_to_opacity; } }
+@keyframes fadeIn {
+  from {
+    opacity: $fadein_from_opacity;
+    opacity: $fadein_from_opacity_ie9; /* IE9 only */
+  } to {
+    opacity: $fadein_to_opacity;
+  }
+}
+
+.fadein {
+  opacity: $fadein_from_opacity;  /* start as invisible */
+  -webkit-animation: $fadein_animation;
+  -moz-animation: $fadein_animation;
+  animation: $fadein_animation;
+
+  -webkit-animation-fill-mode: $fadein_animation_fill;  /* this ensures that once the animation is complete, the elements remain at opacity 1 */
+  -moz-animation-fill-mode: $fadein_animation_fill;
+  animation-fill-mode: $fadein_animation_fill;
+
+  -webkit-animation-duration: $fadein_animation_duration;
+  -moz-animation-duration: $fadein_animation_duration;
+  animation-duration: $fadein_animation_duration;
+
+  &.frame-zero {
+    -webkit-animation-delay: $fadein_frame_zero_animation_delay;
+    -moz-animation-delay: $fadein_frame_zero_animation_delay;
+    animation-delay: $fadein_frame_zero_animation_delay;
+  }
+
+  &.frame-one {
+    -webkit-animation-delay: $fadein_frame_one_animation_delay;
+    -moz-animation-delay: $fadein_frame_one_animation_delay;
+    animation-delay: $fadein_frame_one_animation_delay;
+  }
+
+  &.frame-two {
+    -webkit-animation-delay: $fadein_frame_two_animation_delay;
+    -moz-animation-delay: $fadein_frame_two_animation_delay;
+    animation-delay: $fadein_frame_two_animation_delay;
+  }
+
+  &.frame-three {
+    -webkit-animation-delay: $fadein_frame_three_animation_delay;
+    -moz-animation-delay: $fadein_frame_three_animation_delay;
+    animation-delay: $fadein_frame_three_animation_delay;
+  }
+}

@@ -1,0 +1,9 @@
+.logo img {
+  max-width: $logo_max_width;
+  // medium screen and up
+  @media screen and (max-width: 40em) {
+    & {
+      margin: $logo_medium_margin;
+    }
+  }
+}
