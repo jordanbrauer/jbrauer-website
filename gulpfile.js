@@ -24,3 +24,5 @@ const uses = (task) => {
 }
 
 gulp.task('fetch:foundation:styles', uses('fetchFoundationStylesTask.js'));
+
+gulp.task('build:styles', uses('buildStylesTask.js'));
