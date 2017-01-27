@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+    <meta lang="en">
+    <meta name="rating" content="General">
+    <meta name="description" content=""> <!-- TODO: figure out description system -->
+    <link href="{{ siteUrl }}humans.txt" rel="author">
+    <link href="{{ siteUrl }}copyright.txt" rel="copyright"> <!-- TODO: create copyright text file -->
+    <link href="{{ siteUrl }}css/app.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="row column">
+        <h1><a href="{{ siteUrl }}">{{ siteName }}</a></h1>
+
+        <nav>
+          <ul>
+            <li><a href="{{ url('blog') }}">Blog</a></li>
+          </ul>
+        </nav>
+
+        <hr>
+      </div>
+    </header>
+
+    <main role="main">
+      {% block content %}
+        Woops! Looks like something went wrong here. Call the developers!
+      {% endblock %}
+    </main>
+
+    <footer>
+      <div class="row column">
+        <hr>
+
+        &copy; Copyright {{ now.year }} {{ siteName | ucfirst }}. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
