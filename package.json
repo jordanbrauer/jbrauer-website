@@ -73,8 +73,8 @@
     },
     "vendor": {
       "foundation": {
-        "styles": "./node_modules/foundation-sites/scss/**/*.scss",
-        "scripts": "./node_modules/foundation-sites/dist/js/*/*.js"
+        "styles": [ "./node_modules/foundation-sites/scss/**/*.scss" ],
+        "scripts": [ "./node_modules/foundation-sites/dist/js/*/*.js" ]
       }
     },
     "dist": {
