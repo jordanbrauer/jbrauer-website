@@ -1,0 +1,56 @@
+{% extends "_layout" %}
+{% set categories = entry.postCategory %}
+
+{# page title #}
+{% set title = entry.title %}
+
+{# page content #}
+{% block content %}
+  <div class="row column">
+    <article>
+      {# Post Title #}
+      <h1>{{ entry.title }}</h1>
+
+      <p>
+        {# Post Date #}
+        Posted on {{ entry.postDate.format('F d, Y') }}
+
+        {# Post Categories #}
+        {% if categories | length %}
+          in
+          {# check for one or more categories #}
+          {% if categories | length > 1 %}
+            {# loop through all categories and display accordingly #}
+            {% for category in categories %}
+              {% if not loop.last %}
+                <a href="{{ siteUrl }}blog/categories/{{ category.title | url_encode | lower }}">{{ category.title }}</a>,
+              {% else %}
+                and <a href="{{ siteUrl }}blog/categories/{{ category.title | url_encode | lower }}">{{ category.title }}</a>
+              {% endif %}
+            {% endfor %}
+          {% else %}
+            {# display single category #}
+            <a href="{{ siteUrl }}blog/categories/{{ categories.first().title | url_encode | lower }}">
+              {{ categories.first().title }}
+            </a>
+          {% endif %}
+        {% endif %}
+      </p>
+
+      {# Post body #}
+      {{ entry.body }}
+
+      {# Check is post has tags #}
+      {% if entry.tags | length %}
+        <h4>Tags:</h4>
+
+        {# loop through tags and print them #}
+        <ul>
+          {% for tag in entry.tags %}
+            <li><a href="{{ siteUrl }}blog/tags/{{ tag.title | url_encode | lower }}">{{ tag.title }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </article>
+  </div>
+{% endblock %}

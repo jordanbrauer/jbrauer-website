@@ -1,0 +1,38 @@
+{% extends "_layout" %}
+
+{# page title #}
+{% set title = "Blog" %}
+
+{% block content %}
+  <div class="row column">
+    <h1>Blog</h1>
+  </div>
+
+  <div class="row column">
+    <ul>
+      <li><a href="{{ url('blog/categories') }}">Categories</a></li>
+      <li><a href="{{ url('blog/tags') }}">Tags</a></li>
+    </ul>
+  </div>
+
+  <div class="row column">
+    <h2>Recent Postings</h2>
+  </div>
+
+  <div class="row small-up-1 medium-up-2 large-up-3">
+    {# THE Post loop #}
+    {% for entry in craft.entries.section('blog').find() | slice(0, 8) %}
+      <div class="column column-block">
+        <article>
+          <h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
+
+          <p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
+
+          {{ entry.body.getPage(1) | slice(0, 140) | striptags | escape }}
+
+          <p><a href="{{ entry.url }}">Continue reading...</a></p>
+        </article>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
