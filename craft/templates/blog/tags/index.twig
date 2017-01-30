@@ -1,0 +1,21 @@
+{% extends '_layout' %}
+
+{# Page title #}
+{% set title = 'Blog Tags' %}
+
+{# Main content #}
+{% block content %}
+  <div class="row column">
+    <h2>Tags</h2>
+
+    <ul>
+      {# loop through tags and print links to them #}
+      {% for tag in craft.tags %}
+        <li><a href="{{ siteUrl }}blog/tags/{{ tag.title | url_encode }}">
+          {{ tag.title }}
+        </a></li>
+      {% endfor %}
+    </ul>
+
+  </div>
+{% endblock %}

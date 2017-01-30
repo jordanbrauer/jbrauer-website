@@ -1,0 +1,30 @@
+{% extends '_layout' %}
+{% set tag = craft.tags.title(tag).first() %} {# overwrite whatever original value was passed to tag. #}
+
+{# if that tag does not exist, serve a 404 #}
+{% if not tag %}
+  {% exit 404 %}
+{% endif %}
+
+{# page content #}
+{% block content %}
+  <div class="row column">
+    <h2>Entries tagged with {{ tag.title }}</h2>
+
+    {# get entries that are related to tag #}
+    {% set entries = craft.entries.relatedTo(tag).order('title') %}
+
+    {# check for any related entries #}
+    {% if entries | length %}
+      <ul>
+        {# loop through related entries and print links #}
+        {% for entry in entries %}
+            <li>{{ entry.getLink() }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      {# if no related entries were found, let the user know I guess #}
+      <p>No entries could be found with under that tag.. ¯\_(ツ)_/¯</p>
+    {% endif %}
+  </div>
+{% endblock %}
