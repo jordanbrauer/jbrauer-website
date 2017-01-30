@@ -1,0 +1,30 @@
+{% extends '_layout' %}
+{% set category = craft.categories.title(category).first() %} {# overwrite whatever value was passed to category. #}
+{% set entries = craft.entries.relatedTo(category).order('title') %} {# get related entries #}
+
+{# if the category does not exist, serve a 404 #}
+{% if not category %}
+ {% exit 404 %}
+{% endif %}
+
+{# page title #}
+{% set title = 'Category' %}
+
+{% block content %}
+  <div class="row column">
+    <h2>Entries in the {{ category.title }} category</h2>
+
+    {# check for any related entries #}
+    {% if entries | length %}
+      <ul>
+        {# loop through related entries and print links #}
+        {% for entry in entries %}
+          <li>{{ entry.getLink() }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      {# if no related entries were found, let the user know. #}
+      <p>No entires could be found under that category.</p>
+    {% endif %}
+  </div>
+{% endblock %}

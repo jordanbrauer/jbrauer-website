@@ -1,0 +1,18 @@
+{% extends '_layout' %}
+
+{# page title #}
+{% set title = 'Blog Categories' %}
+
+{# page content #}
+{% block content %}
+  <div class="row column">
+    <h2>Categories</h2>
+
+    <ul>
+      {# loop through categories and print links to them #}
+      {% for category in craft.categories %}
+        <li><a href="{{ siteUrl }}blog/categories/{{ category.title | url_encode | lower }}">{{ category.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}
