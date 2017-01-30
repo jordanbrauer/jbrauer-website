@@ -7,38 +7,22 @@
     <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
     <meta lang="en">
     <meta name="rating" content="General">
-    <meta name="description" content=""> <!-- TODO: figure out description system -->
+    <meta name="description" content="foo bar baz"> {# TODO: figure out description system #}
     <link href="{{ siteUrl }}humans.txt" rel="author">
-    <link href="{{ siteUrl }}copyright.txt" rel="copyright"> <!-- TODO: create copyright text file -->
+    <link href="{{ siteUrl }}copyright.txt" rel="copyright"> {# TODO: create copyright text file #}
     <link href="{{ siteUrl }}css/app.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <div class="row column">
-        <h1><a href="{{ siteUrl }}">{{ siteName }}</a></h1>
-
-        <nav>
-          <ul>
-            <li><a href="{{ url('blog') }}">Blog</a></li>
-          </ul>
-        </nav>
-
-        <hr>
-      </div>
-    </header>
+    {% include '_header' %}
 
     <main role="main">
       {% block content %}
-        Woops! Looks like something went wrong here. Call the developers!
+        <div class="row column">
+          Woops! Looks like something went wrong here. Better call the developers!
+        </div>
       {% endblock %}
     </main>
 
-    <footer>
-      <div class="row column">
-        <hr>
-
-        &copy; Copyright {{ now.year }} {{ siteName | ucfirst }}. All rights reserved.
-      </div>
-    </footer>
+    {% include '_footer' %}
   </body>
 </html>

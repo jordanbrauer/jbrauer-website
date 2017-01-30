@@ -1,0 +1,31 @@
+<header>
+  <div class="row column">
+    <h1><a href="{{ siteUrl }}">{{ siteName }}</a></h1>
+    {# Nav Start #}
+    <nav>
+      <ul>
+        {% nav entry in craft.entries.section('pages') %}
+          <li>
+            <a href="{{ entry.url }}">{{ entry.title }}</a>
+            {% ifchildren %}
+              <ul>
+                {% children %}
+              </ul>
+            {% endifchildren %}
+          </li>
+        {% endnav %}
+        <li><a href="{{ url('blog') }}">Blog</a></li>
+        {#
+        <li><a href="{{ url('portfolio') }}">Portfolio</a></li>
+        <li><a href="{{ url('resume') }}">Resume</a></li>
+        #}
+      </ul>
+      <form action="{{ url('search/results') }}">
+        <input type="search" name="q" placeholder="Search">
+        <input type="submit" value="Go">
+      </form>
+    </nav>
+    {# Nav End #}
+    <hr>
+  </div>
+</header>
