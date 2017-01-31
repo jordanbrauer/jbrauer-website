@@ -1,0 +1,36 @@
+{% extends '_layout' %}
+{% set query = craft.request.getParam('q') %}
+{% set query = query|escape|striptags|trim %}
+{% set entries = craft.entries.search(query).order('score') %}
+
+{# page title #}
+{% set title = 'Search Results for "' ~ query ~ '"' %}
+
+{# page content #}
+{% block content %}
+  <div class="row column">
+    <h1>Search Results</h1>
+
+    {% include '_search' %}
+
+    {% if query|length %}
+      {# Check if search results turned up any entries #}
+      {% if entries|length %}
+        {# infrom the user of the amount of search results they returned. #}
+        <p>Your search for "{{ query }}" returned {{ entries|length }} {% if entries|length > 1 %}results{% else %}result{% endif %}.</p>
+
+        {# loop through matched entries #}
+        <ul>
+          {% for entry in entries %}
+            <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        {# inform user of no matched results for their query #}
+        <p>Your search for "{{ query }}" didn't return any results.</p>
+      {% endif %}
+    {% else %}
+      You did not enter a search query!
+    {% endif %}
+  </div>
+{% endblock %}
