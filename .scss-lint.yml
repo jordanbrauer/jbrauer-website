@@ -1,0 +1,24 @@
+# Files to lint
+scss_files: "**/*.scss"
+
+# Plugins
+plugin_directories: ['.scss-linters']
+plugin_gems: []
+
+# Linter severity.
+severity: warning
+
+# Linter Options
+linters:
+  NameFormat:
+    enabled: true
+    allow_leading_underscore: true
+    convention: snake_case # or 'camel_case', or 'snake_case', or a regex pattern
+
+  HexLength:
+    enabled: true
+    style: long
+
+  LeadingZero:
+    enabled: true
+    style: include_zero
