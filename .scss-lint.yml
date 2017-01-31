@@ -10,6 +10,9 @@ severity: warning
 
 # Linter Options
 linters:
+  Comment:
+    enabled: false
+
   NameFormat:
     enabled: true
     allow_leading_underscore: true
