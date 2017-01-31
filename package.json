@@ -16,6 +16,7 @@
   "homepage": "https://github.com/jordanbrauer/jbrauer-website#readme",
   "dependencies": {
     "del": "^2.2.2",
+    "font-awesome": "^4.7.0",
     "foundation-sites": "^6.3.0",
     "gulp": "^3.9.1",
     "gulp-cache": "^0.4.5",
@@ -38,7 +39,7 @@
       "favicon": {
         "base": "./assets/favicon/"
       },
-      "fonts" : {
+      "fonts": {
         "base": "./assets/fonts/"
       },
       "images": {
@@ -66,15 +67,21 @@
     "src": {
       "base": "./",
       "favicon": [],
-      "fonts" : [],
+      "fonts": [],
       "images": [],
       "scripts": [],
-      "styles": ["./assets/styles/app.scss"]
+      "styles": [
+        "./assets/styles/app.scss"
+      ]
     },
     "vendor": {
       "foundation": {
-        "styles": [ "./node_modules/foundation-sites/scss/**/*.scss" ],
-        "scripts": [ "./node_modules/foundation-sites/dist/js/*/*.js" ]
+        "styles": [
+          "./node_modules/foundation-sites/scss/**/*.scss"
+        ],
+        "scripts": [
+          "./node_modules/foundation-sites/dist/js/*/*.js"
+        ]
       }
     },
     "dist": {
