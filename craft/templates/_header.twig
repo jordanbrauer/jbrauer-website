@@ -1,28 +1,44 @@
-<header>
-  <div class="row column">
-    <h1><a href="{{ siteUrl }}">{{ siteName }}</a></h1>
-    {# Nav Start #}
-    <nav>
-      <ul>
-        {% nav entry in craft.entries.section('pages') %}
-          <li>
-            <a href="{{ entry.url }}">{{ entry.title }}</a>
-            {% ifchildren %}
-              <ul>
-                {% children %}
-              </ul>
-            {% endifchildren %}
-          </li>
-        {% endnav %}
-        <li><a href="{{ url('blog') }}">Blog</a></li>
-        {#
-        <li><a href="{{ url('portfolio') }}">Portfolio</a></li>
-        <li><a href="{{ url('resume') }}">Resume</a></li>
-        #}
-      </ul>
-      {% include '_search' %}
+<header class="header container {% if title == 'Home' %}fadein frame-zero{% endif %}">
+  <section class="row">
+    <div class="columns small-12 medium-6 large-6 text-center medium-text-left">
+      <a href="{{ siteUrl }}" class="logo text-center medium-text-left">
+        <img src="http://placehold.it/150x150" alt="logo">
+      </a>
+    </div> <!-- /.col -->
+    <div class="columns small-12 medium-6 large-6">
+      <h1 class="text-center medium-text-right">
+        Jordan Brauer
+        <br>
+        <small class="subheader">Front-End Developer</small>
+      </h1>
+    </div> <!-- /.col -->
+  </section>
+
+  <!-- <section class="row expanded">
+    <nav role="navigation" class="top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">Site Title</li>
+          {% for entry in craft.entries.section('pages') %}
+            <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+          {% endfor %}
+          <li><a href="{{ url('blog') }}">Blog</a></li>
+          {#
+          <li><a href="{{ url('portfolio') }}">Portfolio</a></li>
+          <li><a href="{{ url('resume') }}">Resume</a></li>
+          #}
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        {% autoescape %}
+        <form action="{{ url('search/results') }}">
+          <ul class="menu">
+            <li><input type="search" name="q" placeholder="Search"></li>
+            <li><input type="submit" class="button" value="Search"></li>
+          </ul>
+        </form>
+        {% endautoescape %}
+      </div>
     </nav>
-    {# Nav End #}
-    <hr>
-  </div>
+  </section> -->
 </header>
