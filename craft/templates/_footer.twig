@@ -1,6 +1,42 @@
-<footer>
-  <div class="row column">
-    <hr>
-    &copy; Copyright {{ now.year }} {{ siteName | ucfirst }}. All rights reserved.
-  </div>
+<footer class="footer container {% if title == 'Home' %}fadein frame-zero{% endif %}">
+  <section class="row">
+    <div class="columns small-12 medium-6 large-6">
+      <h4>Get in touch with me,</h4>
+      <ul class="vertical menu medium-horizontal">
+        <li> <!-- github -->
+          <a href="https://github.com/jordanbrauer" target="_blank">
+            <i class="fa fa-lg fa-github" aria-hidden="true"></i>
+            <span class="hide-for-medium" aria-hidden="true">Github</span>
+            <span class="show-for-sr">Github</span>
+          </a>
+        </li>
+        <li> <!-- twitter -->
+          <a href="https://www.twitter.com/jordbrauer" target="_blank">
+            <i class="fa fa-lg fa-twitter" aria-hidden="true"></i>
+            <span class="hide-for-medium" aria-hidden="true">Twitter</span>
+            <span class="show-for-sr">Twitter</span>
+          </a>
+        </li>
+        <li> <!-- linkedin -->
+          <a href="https://www.linkedin.com/in/jordanbrauer" target="_blank">
+            <i class="fa fa-lg fa-linkedin" aria-hidden="true"></i>
+            <span class="hide-for-medium" aria-hidden="true">LinkedIn</span>
+            <span class="show-for-sr">LinkedIn</span>
+          </a>
+        </li>
+        <li> <!-- facebook -->
+          <a href="https://www.facebook.com/jordbrauer" target="_blank">
+            <i class="fa fa-lg fa-facebook" aria-hidden="true"></i>
+            <span class="hide-for-medium" aria-hidden="true">Facebook</span>
+            <span class="show-for-sr">Facebook</span>
+          </a>
+        </li>
+      </ul>
+    </div> <!-- /.col -->
+
+    <div class="columns small-12 medium-6 large-6">
+      <br>
+      <p class="medium-text-right">Copyright © {{ now.year }} {{ siteName|ucfirst }}</p>
+    </div> <!-- /.col -->
+  </section> <!-- /.row -->
 </footer>
