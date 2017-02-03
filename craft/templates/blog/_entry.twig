@@ -16,21 +16,21 @@
         Posted on {{ entry.postDate.format('F d, Y') }}
 
         {# Post Categories #}
-        {% if categories | length %}
+        {% if categories|length %}
           in
           {# check for one or more categories #}
-          {% if categories | length > 1 %}
+          {% if categories|length > 1 %}
             {# loop through all categories and display accordingly #}
             {% for category in categories %}
               {% if not loop.last %}
-                <a href="{{ siteUrl }}blog/categories/{{ category.title | url_encode | lower }}">{{ category.title }}</a>,
+                <a href="{{ siteUrl }}blog/categories/{{ category.title|url_encode|lower }}">{{ category.title }}</a>,
               {% else %}
-                and <a href="{{ siteUrl }}blog/categories/{{ category.title | url_encode | lower }}">{{ category.title }}</a>
+                and <a href="{{ siteUrl }}blog/categories/{{ category.title|url_encode|lower }}">{{ category.title }}</a>
               {% endif %}
             {% endfor %}
           {% else %}
             {# display single category #}
-            <a href="{{ siteUrl }}blog/categories/{{ categories.first().title | url_encode | lower }}">
+            <a href="{{ siteUrl }}blog/categories/{{ categories.first().title|url_encode|lower }}">
               {{ categories.first().title }}
             </a>
           {% endif %}
@@ -41,13 +41,13 @@
       {{ entry.body }}
 
       {# Check is post has tags #}
-      {% if entry.tags | length %}
-        <h4>Tags:</h4>
+      {% if entry.tags|length %}
+        <h4>Tags</h4>
 
         {# loop through tags and print them #}
-        <ul>
+        <ul class="no-bullet">
           {% for tag in entry.tags %}
-            <li><a href="{{ siteUrl }}blog/tags/{{ tag.title | url_encode | lower }}">{{ tag.title }}</a></li>
+            <li class="label"><a href="{{ siteUrl }}blog/tags/{{ tag.title|url_encode|lower }}">{{ tag.title }}</a></li>
           {% endfor %}
         </ul>
       {% endif %}
