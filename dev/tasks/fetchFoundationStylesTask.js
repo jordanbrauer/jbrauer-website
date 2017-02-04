@@ -6,6 +6,6 @@
 module.exports = (gulp, pkg, plugins) => {
   return () => {
     gulp.src(pkg.globs.vendor.foundation.styles)
-      .pipe(gulp.dest(pkg.paths.src.styles.foundation));
+      .pipe(gulp.dest(pkg.paths.src.assets.styles.foundation));
   }
 }

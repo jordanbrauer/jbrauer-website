@@ -5,9 +5,9 @@
 
 module.exports = (gulp, pkg, plugins) => {
   return () => {
-    gulp.src(pkg.globs.src.styles)
+    gulp.src(pkg.globs.src.assets.styles)
       .pipe(plugins.sass({ outputStyle: 'expanded' })
       .on('error', plugins.sass.logError))
-      .pipe(gulp.dest(pkg.paths.dist.styles));
+      .pipe(gulp.dest(pkg.paths.dist.assets.styles));
   }
 }
