@@ -36,43 +36,49 @@
   "paths": {
     "src": {
       "base": "./",
-      "favicon": {
-        "base": "./assets/favicon/"
-      },
-      "fonts": {
-        "base": "./assets/fonts/"
-      },
-      "images": {
-        "base": "./assets/images/"
-      },
-      "scripts": {
-        "base": "./assets/scripts/",
-        "foundation": "./assets/scripts/foundation/"
-      },
-      "styles": {
-        "base": "./assets/styles/",
-        "foundation": "./assets/styles/foundation/"
+      "assets": {
+        "favicon": {
+          "base": "./assets/favicon/"
+        },
+        "fonts": {
+          "base": "./assets/fonts/"
+        },
+        "images": {
+          "base": "./assets/images/"
+        },
+        "scripts": {
+          "base": "./assets/scripts/",
+          "foundation": "./assets/scripts/foundation/"
+        },
+        "styles": {
+          "base": "./assets/styles/",
+          "foundation": "./assets/styles/foundation/"
+        }
       }
     },
     "dist": {
       "base": "./public/",
-      "favicon": "./public/favicon/",
-      "fonts": "./public/fonts/",
-      "images": "./public/img/",
-      "scripts": "./public/js",
-      "styles": "./public/css/"
+      "assets": {
+        "favicon": "./public/favicon/",
+        "fonts": "./public/fonts/",
+        "images": "./public/img/",
+        "scripts": "./public/js",
+        "styles": "./public/css/"
+      }
     }
   },
   "globs": {
     "src": {
-      "base": "./",
-      "favicon": [],
-      "fonts": [],
-      "images": [],
-      "scripts": [],
-      "styles": [
-        "./assets/styles/app.scss"
-      ]
+      "assets": {
+        "base": "./",
+        "favicon": [],
+        "fonts": [],
+        "images": [],
+        "scripts": [],
+        "styles": [
+          "./assets/styles/app.scss"
+        ]
+      }
     },
     "vendor": {
       "foundation": {
