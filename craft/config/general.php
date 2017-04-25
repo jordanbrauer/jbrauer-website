@@ -29,7 +29,7 @@ return array(
     'isSystemOn' => null,
     'logDumpMethod' => 'var_export',
     'overridePhpSessionLocation' => false,
-    'phpMaxMemoryLimit' => '256M',
+    'phpMaxMemoryLimit' => '512M',
     'phpSessionName' => 'CraftSessionId',
     'runTasksAutomatically' => true,
     'searchIgnoreWords' => array('the', 'and'),
