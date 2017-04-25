@@ -1,0 +1,38 @@
+{% extends '_layout' %}
+
+{% if year is not defined %}
+  {% set year = now.year %}
+{% endif %}
+
+{% set title = 'Blog Archive' %}
+{% set firstEntry = craft.entries.section('blog').order('postDate asc').first() %}
+{% set currentYearEntries = craft.entries.section('blog').limit(null).after(year).before(year+1) %}
+
+{% block content %}
+  <div class="row column">
+    <h2>Blog Archive</h2>
+  </div>
+
+  <div class="row">
+    <div class="columns small-12 medium-3 large-3">
+      <h3>Choose a year</h3>
+      <ul class="vertical menu">
+        {% for year in now.year .. firstEntry.postDate.year %}
+          <li><a href="{{ siteUrl }}blog/archive/{{ year }}">{{ year }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="columns small-12 medium-9 large-9">
+      <h3>Entries from {{ year }}</h3>
+      {% for month, entries in currentYearEntries | group("postDate|date('F')") %}
+        <h2>{{ month }}</h2>
+        <ul class="no-bullet">
+          {% for entry in entries %}
+            <li>{{ entry.getLink() }}</li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

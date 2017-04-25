@@ -1,0 +1,31 @@
+{% extends '_layout' %}
+
+{% if year is not defined %}
+  {% set year = now.year %}
+{% endif %}
+
+{% set title = 'Category' %}
+{% set archivedEntriesYear = craft.entries.section('blog').limit(null).after(year).before(year+1) %}
+
+
+{% block content %}
+  <div class="row column">
+    <h3>Entries from {{ year }}</h3>
+    {% for month, entries in archivedEntriesYear | group("postDate|date('F')") %}
+      <h2>{{ month }}</h2>
+      <ul class="no-bullet">
+        {% for entry in entries %}
+          <li>{{ entry.getLink() }}</li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </div>
+
+  <div class="row">
+    <div class="columns small-12 medium-12 large-12">
+
+    </div>
+
+    <!-- <div class="columns small-12 medium-12 large-12"></div> -->
+  </div>
+{% endblock %}
